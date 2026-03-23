@@ -1,0 +1,18 @@
+version: "3.8"
+
+# Development override
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+services:
+  ojs:
+    environment:
+      OJS_CLI_INSTALL: 1
+      OJS_DEBUG: "true"
+
+  db:
+    ports:
+      - "3306:3306"
+
+  nginx:
+    ports:
+      - "8080:80"

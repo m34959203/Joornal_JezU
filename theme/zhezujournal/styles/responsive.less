@@ -1,0 +1,225 @@
+/**
+ * responsive.less
+ *
+ * Mobile-first responsive styles.
+ * Breakpoints: 375px, 768px, 1024px, 1366px, 1920px.
+ */
+
+@import 'variables.less';
+
+// ═══════════════════════════════════════════════════════════════════════════
+// BASE (mobile-first, < 375px implicit)
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Header: stack vertically on mobile
+.zhezu-header__main {
+    flex-wrap: wrap;
+}
+
+.zhezu-header__nav-wrapper {
+    display: none; // Desktop nav hidden on mobile
+}
+
+.zhezu-header__hamburger {
+    display: flex; // Show hamburger on mobile
+}
+
+.zhezu-header__search-form--expanded {
+    width: 200px;
+}
+
+// Homepage: single column
+.zhezu-home__hero {
+    padding: @spacing-xl @spacing-md;
+}
+
+.zhezu-home__hero-title {
+    font-size: @font-size-xl;
+}
+
+.zhezu-home__cta {
+    width: 100%;
+    justify-content: center;
+}
+
+// Archive: single column cards
+.zhezu-archive__year-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+// Article: full width meta
+.zhezu-article__title {
+    font-size: @font-size-h2;
+}
+
+.zhezu-article__stats {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+// Editorial: hide table, show cards
+.zhezu-editorial__table {
+    display: none;
+}
+
+.zhezu-editorial__card {
+    display: block;
+}
+
+// Footer: single column
+.zhezu-footer__inner {
+    grid-template-columns: 1fr;
+}
+
+.zhezu-footer__bottom {
+    flex-direction: column;
+    text-align: center;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TABLET (>= 768px)
+// ═══════════════════════════════════════════════════════════════════════════
+
+@media (min-width: @bp-tablet) {
+    // Header: show desktop nav, hide hamburger
+    .zhezu-header__nav-wrapper {
+        display: block;
+    }
+
+    .zhezu-header__hamburger {
+        display: none;
+    }
+
+    .zhezu-header__mobile-menu {
+        display: none !important;
+    }
+
+    .zhezu-header__main {
+        flex-wrap: nowrap;
+    }
+
+    .zhezu-header__search-form--expanded {
+        width: 280px;
+    }
+
+    // Homepage: wider hero
+    .zhezu-home__hero {
+        padding: @spacing-xxl @spacing-xl;
+    }
+
+    .zhezu-home__hero-title {
+        font-size: @font-size-xxl;
+    }
+
+    .zhezu-home__cta {
+        width: auto;
+    }
+
+    .zhezu-home__issue {
+        grid-template-columns: 200px 1fr;
+    }
+
+    // Archive: two-column cards
+    .zhezu-archive__issues {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zhezu-archive__year-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    // Article
+    .zhezu-article__title {
+        font-size: @font-size-h1;
+    }
+
+    .zhezu-article__meta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .zhezu-article__stats {
+        flex-direction: row;
+    }
+
+    // Editorial: show table, hide cards
+    .zhezu-editorial__table {
+        display: table;
+    }
+
+    .zhezu-editorial__card {
+        display: none;
+    }
+
+    // Footer: two columns
+    .zhezu-footer__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .zhezu-footer__bottom {
+        flex-direction: row;
+    }
+
+    // Search
+    .zhezu-search__form {
+        max-width: 600px;
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// DESKTOP (>= 1024px)
+// ═══════════════════════════════════════════════════════════════════════════
+
+@media (min-width: @bp-desktop) {
+    // Homepage
+    .zhezu-home__hero-title {
+        font-size: @font-size-h1;
+    }
+
+    // Archive: three-column cards
+    .zhezu-archive__issues {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Footer: three columns
+    .zhezu-footer__inner {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    // Forms: wider card
+    .zhezu-form__card {
+        padding: @spacing-xxl;
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// WIDE (>= 1366px)
+// ═══════════════════════════════════════════════════════════════════════════
+
+@media (min-width: @bp-wide) {
+    // Archive: four-column cards
+    .zhezu-archive__issues {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    // Homepage: larger hero padding
+    .zhezu-home__hero {
+        padding: @spacing-section @spacing-xxl;
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// FULL HD (>= 1920px)
+// ═══════════════════════════════════════════════════════════════════════════
+
+@media (min-width: @bp-full) {
+    // Slightly larger base font for big screens
+    body {
+        font-size: 17px;
+    }
+
+    .zhezu-home__hero-title {
+        font-size: 42px;
+    }
+}

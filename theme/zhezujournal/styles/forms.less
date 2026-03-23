@@ -1,0 +1,251 @@
+/**
+ * forms.less
+ *
+ * Styles for registration, login, and submission forms.
+ */
+
+@import 'variables.less';
+
+// ── Form Container ──────────────────────────────────────────────────────────
+
+.zhezu-form {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: @spacing-xl @spacing-md;
+}
+
+.zhezu-form__title {
+    font-family: @font-serif;
+    font-size: @font-size-h2;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    text-align: center;
+    margin: 0 0 @spacing-xl;
+}
+
+// ── Form Card ───────────────────────────────────────────────────────────────
+
+.zhezu-form__card {
+    background-color: @color-bg;
+    border: 1px solid @color-border;
+    border-radius: @border-radius-lg;
+    padding: @spacing-xl;
+    box-shadow: @shadow-sm;
+}
+
+// ── Form Group ──────────────────────────────────────────────────────────────
+
+.zhezu-form__group {
+    margin-bottom: @spacing-lg;
+}
+
+.zhezu-form__label {
+    display: block;
+    font-size: @font-size-sm;
+    font-weight: @font-weight-medium;
+    color: @color-text;
+    margin-bottom: @spacing-sm;
+}
+
+.zhezu-form__label--required {
+    &::after {
+        content: ' *';
+        color: @color-error;
+    }
+}
+
+.zhezu-form__input,
+.zhezu-form__select,
+.zhezu-form__textarea {
+    width: 100%;
+    padding: @spacing-md;
+    font-family: @font-sans;
+    font-size: @font-size-base;
+    color: @color-text;
+    background-color: @color-bg;
+    border: 1px solid @color-border;
+    border-radius: @border-radius;
+    outline: none;
+    transition: border-color @transition-fast, box-shadow @transition-fast;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: @color-primary;
+        box-shadow: 0 0 0 3px fade(@color-primary, 12%);
+    }
+
+    &--error {
+        border-color: @color-error;
+
+        &:focus {
+            box-shadow: 0 0 0 3px fade(@color-error, 12%);
+        }
+    }
+}
+
+.zhezu-form__textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: @line-height-base;
+}
+
+.zhezu-form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+// ── Help Text & Errors ──────────────────────────────────────────────────────
+
+.zhezu-form__help {
+    font-size: @font-size-xs;
+    color: @color-text-muted;
+    margin-top: @spacing-xs;
+}
+
+.zhezu-form__error {
+    font-size: @font-size-xs;
+    color: @color-error;
+    margin-top: @spacing-xs;
+}
+
+// ── Checkbox & Radio ────────────────────────────────────────────────────────
+
+.zhezu-form__check {
+    display: flex;
+    align-items: flex-start;
+    gap: @spacing-sm;
+    margin-bottom: @spacing-md;
+}
+
+.zhezu-form__check-input {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: @color-primary;
+}
+
+.zhezu-form__check-label {
+    font-size: @font-size-sm;
+    color: @color-text;
+    line-height: @line-height-base;
+}
+
+// ── Buttons ─────────────────────────────────────────────────────────────────
+
+.zhezu-form__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: @spacing-md;
+    margin-top: @spacing-xl;
+}
+
+.zhezu-form__submit {
+    padding: @spacing-md @spacing-xxl;
+    background-color: @color-primary;
+    color: @color-text-inverse;
+    font-family: @font-sans;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: @border-radius;
+    cursor: pointer;
+    transition: background-color @transition-fast, transform @transition-fast;
+
+    &:hover {
+        background-color: @color-primary-light;
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+    }
+}
+
+.zhezu-form__cancel {
+    padding: @spacing-md @spacing-xl;
+    background-color: transparent;
+    color: @color-text-light;
+    font-family: @font-sans;
+    font-size: @font-size-sm;
+    border: 1px solid @color-border;
+    border-radius: @border-radius;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color @transition-fast, color @transition-fast;
+
+    &:hover {
+        border-color: @color-text-light;
+        color: @color-text;
+    }
+}
+
+// ── Form Links ──────────────────────────────────────────────────────────────
+
+.zhezu-form__link {
+    font-size: @font-size-sm;
+    color: @color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// ── File Upload ─────────────────────────────────────────────────────────────
+
+.zhezu-form__file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: @spacing-xl;
+    border: 2px dashed @color-border;
+    border-radius: @border-radius-lg;
+    background-color: @color-bg-alt;
+    cursor: pointer;
+    transition: border-color @transition-fast, background-color @transition-fast;
+
+    &:hover {
+        border-color: @color-primary;
+        background-color: fade(@color-primary, 5%);
+    }
+}
+
+.zhezu-form__file-upload-text {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+    margin-top: @spacing-sm;
+}
+
+.zhezu-form__file-upload-hint {
+    font-size: @font-size-xs;
+    color: @color-text-muted;
+    margin-top: @spacing-xs;
+}
+
+// ── Fieldset ────────────────────────────────────────────────────────────────
+
+.zhezu-form__fieldset {
+    border: 1px solid @color-border-light;
+    border-radius: @border-radius;
+    padding: @spacing-lg;
+    margin-bottom: @spacing-lg;
+}
+
+.zhezu-form__legend {
+    font-size: @font-size-sm;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 @spacing-sm;
+}

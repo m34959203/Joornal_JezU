@@ -1,0 +1,332 @@
+/**
+ * header.less
+ *
+ * Styles for site header: logo, journal title, navigation,
+ * search, language switcher, login, ISSN, mobile hamburger.
+ */
+
+@import 'variables.less';
+
+// ── Header Block ────────────────────────────────────────────────────────────
+
+.zhezu-header {
+    background-color: @color-bg;
+    box-shadow: @shadow-header;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.zhezu-header__top-bar {
+    background-color: @color-primary;
+    color: @color-text-inverse;
+    font-size: @font-size-xs;
+    padding: @spacing-xs @spacing-md;
+}
+
+.zhezu-header__top-bar-inner {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: @spacing-sm;
+}
+
+.zhezu-header__issn {
+    font-family: @font-mono;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.zhezu-header__issn-label {
+    font-weight: @font-weight-medium;
+    margin-right: @spacing-xs;
+}
+
+// ── Main Header ─────────────────────────────────────────────────────────────
+
+.zhezu-header__main {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: @spacing-md;
+    gap: @spacing-md;
+}
+
+.zhezu-header__logo {
+    flex-shrink: 0;
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    img {
+        height: 48px;
+        width: auto;
+        display: block;
+    }
+}
+
+.zhezu-header__title {
+    flex: 1;
+    min-width: 0;
+
+    a {
+        text-decoration: none;
+        color: @color-primary;
+    }
+}
+
+.zhezu-header__title-text {
+    font-family: @font-serif;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    line-height: @line-height-heading;
+    margin: 0;
+}
+
+// ── Actions (search, lang, login) ───────────────────────────────────────────
+
+.zhezu-header__actions {
+    display: flex;
+    align-items: center;
+    gap: @spacing-md;
+    flex-shrink: 0;
+}
+
+// ── Search ──────────────────────────────────────────────────────────────────
+
+.zhezu-header__search {
+    position: relative;
+}
+
+.zhezu-header__search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: @color-primary;
+    padding: @spacing-sm;
+    font-size: @font-size-lg;
+    display: flex;
+    align-items: center;
+    transition: color @transition-fast;
+
+    &:hover {
+        color: @color-secondary;
+    }
+}
+
+.zhezu-header__search-form {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: width @transition-base, opacity @transition-base;
+
+    &--expanded {
+        width: 280px;
+        opacity: 1;
+    }
+}
+
+.zhezu-header__search-input {
+    width: 100%;
+    padding: @spacing-sm @spacing-md;
+    border: 1px solid @color-border;
+    border-radius: @border-radius;
+    font-family: @font-sans;
+    font-size: @font-size-sm;
+    outline: none;
+    transition: border-color @transition-fast;
+
+    &:focus {
+        border-color: @color-primary;
+        box-shadow: 0 0 0 2px fade(@color-primary, 20%);
+    }
+}
+
+// ── Language Switcher ───────────────────────────────────────────────────────
+
+.zhezu-header__lang {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: @font-size-xs;
+    font-weight: @font-weight-medium;
+}
+
+.zhezu-header__lang-link {
+    padding: @spacing-xs @spacing-sm;
+    color: @color-text-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: @border-radius;
+    transition: background-color @transition-fast, color @transition-fast;
+
+    &:hover {
+        background-color: @color-bg-alt;
+        color: @color-primary;
+    }
+
+    &--active {
+        background-color: @color-primary;
+        color: @color-text-inverse;
+
+        &:hover {
+            background-color: @color-primary-light;
+            color: @color-text-inverse;
+        }
+    }
+}
+
+.zhezu-header__lang-sep {
+    color: @color-border;
+    user-select: none;
+}
+
+// ── Login Button ────────────────────────────────────────────────────────────
+
+.zhezu-header__login {
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: @spacing-xs;
+        padding: @spacing-sm @spacing-md;
+        font-size: @font-size-sm;
+        font-weight: @font-weight-medium;
+        color: @color-primary;
+        text-decoration: none;
+        border: 1px solid @color-primary;
+        border-radius: @border-radius;
+        transition: background-color @transition-fast, color @transition-fast;
+
+        &:hover {
+            background-color: @color-primary;
+            color: @color-text-inverse;
+        }
+    }
+}
+
+.zhezu-header__user-name {
+    font-size: @font-size-sm;
+    color: @color-primary;
+    font-weight: @font-weight-medium;
+}
+
+// ── Navigation ──────────────────────────────────────────────────────────────
+
+.zhezu-header__nav-wrapper {
+    border-top: 1px solid @color-border-light;
+    background-color: @color-bg;
+}
+
+.zhezu-header__nav {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    padding: 0 @spacing-md;
+}
+
+.zhezu-header__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0;
+}
+
+.zhezu-header__menu-item {
+    position: relative;
+
+    &--active {
+        .zhezu-header__menu-link {
+            color: @color-secondary;
+            border-bottom-color: @color-secondary;
+        }
+    }
+}
+
+.zhezu-header__menu-link {
+    display: block;
+    padding: @spacing-md @spacing-lg;
+    font-family: @font-sans;
+    font-size: @font-size-sm;
+    font-weight: @font-weight-medium;
+    color: @color-primary;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid transparent;
+    transition: color @transition-fast, border-color @transition-fast;
+
+    &:hover {
+        color: @color-secondary;
+        border-bottom-color: @color-secondary-light;
+    }
+}
+
+// ── Mobile Hamburger ────────────────────────────────────────────────────────
+
+.zhezu-header__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: @spacing-sm;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+}
+
+.zhezu-header__hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: @color-primary;
+    border-radius: 1px;
+    transition: transform @transition-base, opacity @transition-base;
+}
+
+.zhezu-header__hamburger--open {
+    .zhezu-header__hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .zhezu-header__hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    .zhezu-header__hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+// ── Mobile Menu (hidden by default, shown via responsive.less) ──────────────
+
+.zhezu-header__mobile-menu {
+    display: none;
+    background-color: @color-bg;
+    border-top: 1px solid @color-border-light;
+    padding: @spacing-md;
+
+    &--open {
+        display: block;
+    }
+}
+
+.zhezu-header__mobile-menu .zhezu-header__menu {
+    flex-direction: column;
+}
+
+.zhezu-header__mobile-menu .zhezu-header__menu-link {
+    padding: @spacing-md;
+    border-bottom: 1px solid @color-border-light;
+    border-left: none;
+}

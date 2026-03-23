@@ -1,0 +1,207 @@
+/**
+ * search.less
+ *
+ * Styles for search results page.
+ */
+
+@import 'variables.less';
+
+// ── Search Page Container ───────────────────────────────────────────────────
+
+.zhezu-search {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    padding: @spacing-xl @spacing-md;
+}
+
+.zhezu-search__title {
+    font-family: @font-serif;
+    font-size: @font-size-h1;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-xl;
+}
+
+// ── Search Form ─────────────────────────────────────────────────────────────
+
+.zhezu-search__form {
+    display: flex;
+    gap: @spacing-sm;
+    margin-bottom: @spacing-xxl;
+}
+
+.zhezu-search__input {
+    flex: 1;
+    padding: @spacing-md @spacing-lg;
+    font-family: @font-sans;
+    font-size: @font-size-base;
+    border: 2px solid @color-border;
+    border-radius: @border-radius;
+    outline: none;
+    transition: border-color @transition-fast;
+
+    &:focus {
+        border-color: @color-primary;
+        box-shadow: 0 0 0 3px fade(@color-primary, 15%);
+    }
+}
+
+.zhezu-search__submit {
+    padding: @spacing-md @spacing-xl;
+    background-color: @color-primary;
+    color: @color-text-inverse;
+    font-family: @font-sans;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: @border-radius;
+    cursor: pointer;
+    transition: background-color @transition-fast;
+
+    &:hover {
+        background-color: @color-primary-light;
+    }
+}
+
+// ── Results Summary ─────────────────────────────────────────────────────────
+
+.zhezu-search__summary {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+    margin-bottom: @spacing-lg;
+    padding-bottom: @spacing-md;
+    border-bottom: 1px solid @color-border-light;
+}
+
+.zhezu-search__query-text {
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+}
+
+// ── Results List ────────────────────────────────────────────────────────────
+
+.zhezu-search__results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.zhezu-search__result-item {
+    padding: @spacing-lg;
+    border-bottom: 1px solid @color-border-light;
+    transition: background-color @transition-fast;
+
+    &:hover {
+        background-color: @color-bg-alt;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.zhezu-search__result-title {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    margin: 0 0 @spacing-sm;
+
+    a {
+        color: @color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-secondary;
+            text-decoration: underline;
+        }
+    }
+}
+
+.zhezu-search__result-authors {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+    margin-bottom: @spacing-sm;
+}
+
+.zhezu-search__result-excerpt {
+    font-size: @font-size-sm;
+    color: @color-text;
+    line-height: @line-height-base;
+
+    mark {
+        background-color: fade(@color-secondary, 30%);
+        padding: 1px 2px;
+        border-radius: 2px;
+    }
+}
+
+.zhezu-search__result-meta {
+    margin-top: @spacing-sm;
+    font-size: @font-size-xs;
+    color: @color-text-muted;
+}
+
+// ── No Results ──────────────────────────────────────────────────────────────
+
+.zhezu-search__no-results {
+    text-align: center;
+    padding: @spacing-xxl;
+    color: @color-text-light;
+}
+
+.zhezu-search__no-results-icon {
+    font-size: 48px;
+    margin-bottom: @spacing-md;
+    opacity: 0.4;
+}
+
+.zhezu-search__no-results-text {
+    font-size: @font-size-lg;
+    margin: 0 0 @spacing-sm;
+}
+
+.zhezu-search__no-results-hint {
+    font-size: @font-size-sm;
+    color: @color-text-muted;
+}
+
+// ── Pagination ──────────────────────────────────────────────────────────────
+
+.zhezu-search__pagination {
+    display: flex;
+    justify-content: center;
+    gap: @spacing-xs;
+    margin-top: @spacing-xxl;
+}
+
+.zhezu-search__page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: @spacing-sm;
+    font-size: @font-size-sm;
+    color: @color-primary;
+    border: 1px solid @color-border;
+    border-radius: @border-radius;
+    text-decoration: none;
+    transition: background-color @transition-fast, border-color @transition-fast;
+
+    &:hover {
+        background-color: @color-bg-alt;
+        border-color: @color-primary;
+    }
+
+    &--active {
+        background-color: @color-primary;
+        border-color: @color-primary;
+        color: @color-text-inverse;
+    }
+
+    &--disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}

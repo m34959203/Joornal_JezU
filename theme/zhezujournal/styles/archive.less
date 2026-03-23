@@ -1,0 +1,204 @@
+/**
+ * archive.less
+ *
+ * Styles for archive page: year navigation,
+ * issue number buttons, issue cards.
+ */
+
+@import 'variables.less';
+
+// ── Archive Container ───────────────────────────────────────────────────────
+
+.zhezu-archive {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    padding: @spacing-xl @spacing-md;
+}
+
+.zhezu-archive__title {
+    font-family: @font-serif;
+    font-size: @font-size-h1;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-xl;
+}
+
+// ── Year Navigation ─────────────────────────────────────────────────────────
+
+.zhezu-archive__year-nav {
+    margin-bottom: @spacing-xxl;
+}
+
+.zhezu-archive__year-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: @spacing-sm;
+    padding: @spacing-md 0;
+    border-bottom: 1px solid @color-border-light;
+}
+
+.zhezu-archive__year-label {
+    font-family: @font-serif;
+    font-size: @font-size-xl;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    min-width: 80px;
+}
+
+.zhezu-archive__issue-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @spacing-sm;
+}
+
+.zhezu-archive__issue-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: @spacing-sm @spacing-md;
+    min-width: 48px;
+    font-family: @font-sans;
+    font-size: @font-size-sm;
+    font-weight: @font-weight-medium;
+    color: @color-primary;
+    background-color: @color-bg;
+    border: 1px solid @color-primary;
+    border-radius: @border-radius;
+    text-decoration: none;
+    transition: background-color @transition-fast, color @transition-fast;
+
+    &:hover {
+        background-color: @color-primary;
+        color: @color-text-inverse;
+    }
+
+    &--active {
+        background-color: @color-primary;
+        color: @color-text-inverse;
+    }
+}
+
+// ── Issue Cards Grid ────────────────────────────────────────────────────────
+
+.zhezu-archive__issues {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: @spacing-lg;
+}
+
+.zhezu-archive__issue-card {
+    display: flex;
+    flex-direction: column;
+    background-color: @color-bg;
+    border: 1px solid @color-border;
+    border-radius: @border-radius-lg;
+    overflow: hidden;
+    transition: box-shadow @transition-fast, transform @transition-fast;
+
+    &:hover {
+        box-shadow: @shadow-md;
+        transform: translateY(-2px);
+    }
+}
+
+.zhezu-archive__issue-card-cover {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background-color: @color-bg-alt;
+}
+
+.zhezu-archive__issue-card-body {
+    padding: @spacing-lg;
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-sm;
+}
+
+.zhezu-archive__issue-card-title {
+    font-family: @font-serif;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-secondary;
+        }
+    }
+}
+
+.zhezu-archive__issue-card-meta {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+}
+
+.zhezu-archive__issue-card-articles {
+    font-size: @font-size-sm;
+    color: @color-text-muted;
+}
+
+// ── Issue Contents (article list within issue) ──────────────────────────────
+
+.zhezu-archive__toc {
+    margin-top: @spacing-xl;
+}
+
+.zhezu-archive__toc-section {
+    margin-bottom: @spacing-xl;
+}
+
+.zhezu-archive__toc-section-title {
+    font-family: @font-serif;
+    font-size: @font-size-h3;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    padding-bottom: @spacing-sm;
+    border-bottom: 2px solid @color-secondary;
+    margin: 0 0 @spacing-md;
+}
+
+.zhezu-archive__toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.zhezu-archive__toc-item {
+    padding: @spacing-md;
+    border-bottom: 1px solid @color-border-light;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.zhezu-archive__toc-article-title {
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+    margin: 0 0 @spacing-xs;
+
+    a {
+        color: @color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-secondary;
+        }
+    }
+}
+
+.zhezu-archive__toc-article-authors {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+}
+
+.zhezu-archive__toc-article-pages {
+    font-size: @font-size-xs;
+    color: @color-text-muted;
+}

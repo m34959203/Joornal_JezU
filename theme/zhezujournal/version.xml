@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+<!--
+  - version.xml
+  -
+  - Plugin version descriptor for ZhezuJournal theme.
+  -->
+<version>
+    <application>zhezujournal</application>
+    <type>plugins.themes</type>
+    <release>1.0.0</release>
+    <date>2026-03-23</date>
+    <lazy-load>0</lazy-load>
+    <class>APP\plugins\themes\zhezujournal\ZhezuJournalThemePlugin</class>
+    <compatibility application="ojs2">
+        <version>3.4.0.0</version>
+        <version>3.4.0.1</version>
+        <version>3.4.0.2</version>
+        <version>3.4.0.3</version>
+        <version>3.4.0.4</version>
+        <version>3.4.0.5</version>
+    </compatibility>
+</version>

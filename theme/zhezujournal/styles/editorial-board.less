@@ -1,0 +1,210 @@
+/**
+ * editorial-board.less
+ *
+ * Styles for editorial board page: section headings,
+ * 3-column table layout, Scopus/WoS/ORCID profile buttons.
+ */
+
+@import 'variables.less';
+
+// ── Editorial Board Container ───────────────────────────────────────────────
+
+.zhezu-editorial {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    padding: @spacing-xl @spacing-md;
+}
+
+.zhezu-editorial__title {
+    font-family: @font-serif;
+    font-size: @font-size-h1;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-xl;
+    text-align: center;
+}
+
+// ── Section (Chief Editor, Secretary, Members) ──────────────────────────────
+
+.zhezu-editorial__section {
+    margin-bottom: @spacing-xxl;
+}
+
+.zhezu-editorial__section-title {
+    font-family: @font-serif;
+    font-size: @font-size-h2;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-lg;
+    padding-bottom: @spacing-sm;
+    border-bottom: 3px solid @color-secondary;
+}
+
+// ── Table ───────────────────────────────────────────────────────────────────
+
+.zhezu-editorial__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: @spacing-lg;
+}
+
+.zhezu-editorial__table thead {
+    background-color: @color-primary;
+    color: @color-text-inverse;
+}
+
+.zhezu-editorial__table-header {
+    padding: @spacing-md @spacing-lg;
+    font-size: @font-size-sm;
+    font-weight: @font-weight-bold;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+
+    &--name {
+        width: 25%;
+    }
+
+    &--info {
+        width: 50%;
+    }
+
+    &--profiles {
+        width: 25%;
+        text-align: center;
+    }
+}
+
+.zhezu-editorial__table tbody tr {
+    border-bottom: 1px solid @color-border-light;
+    transition: background-color @transition-fast;
+
+    &:hover {
+        background-color: @color-bg-alt;
+    }
+
+    &:nth-child(even) {
+        background-color: fade(@color-bg-alt, 50%);
+
+        &:hover {
+            background-color: @color-bg-alt;
+        }
+    }
+}
+
+// ── Table Cells ─────────────────────────────────────────────────────────────
+
+.zhezu-editorial__cell {
+    padding: @spacing-md @spacing-lg;
+    font-size: @font-size-sm;
+    vertical-align: top;
+    line-height: @line-height-base;
+}
+
+.zhezu-editorial__name {
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+}
+
+.zhezu-editorial__degree {
+    color: @color-text;
+}
+
+.zhezu-editorial__position {
+    color: @color-text-light;
+    font-style: italic;
+}
+
+.zhezu-editorial__organization {
+    color: @color-text;
+}
+
+.zhezu-editorial__country {
+    color: @color-text-muted;
+    font-size: @font-size-xs;
+    margin-top: @spacing-xs;
+}
+
+// ── Profile Buttons (Scopus, WoS, ORCID) ───────────────────────────────────
+
+.zhezu-editorial__profiles {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: @spacing-sm;
+}
+
+.zhezu-editorial__profile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: @spacing-xs;
+    padding: @spacing-xs @spacing-sm;
+    font-size: @font-size-xs;
+    font-weight: @font-weight-bold;
+    text-decoration: none;
+    border-radius: @border-radius;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: opacity @transition-fast, transform @transition-fast;
+    white-space: nowrap;
+
+    &:hover {
+        opacity: 0.85;
+        transform: translateY(-1px);
+    }
+
+    &--scopus {
+        background-color: #E9711C;
+        color: @color-text-inverse;
+    }
+
+    &--wos {
+        background-color: #5C2D91;
+        color: @color-text-inverse;
+    }
+
+    &--orcid {
+        background-color: #A6CE39;
+        color: #333333;
+    }
+}
+
+.zhezu-editorial__profile-icon {
+    width: 14px;
+    height: 14px;
+}
+
+// ── Mobile Card Layout (used in responsive.less) ────────────────────────────
+
+.zhezu-editorial__card {
+    display: none; // Shown only on mobile via responsive.less
+    background-color: @color-bg;
+    border: 1px solid @color-border;
+    border-radius: @border-radius-lg;
+    padding: @spacing-lg;
+    margin-bottom: @spacing-md;
+}
+
+.zhezu-editorial__card-name {
+    font-family: @font-serif;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-sm;
+}
+
+.zhezu-editorial__card-info {
+    font-size: @font-size-sm;
+    color: @color-text;
+    line-height: @line-height-base;
+    margin-bottom: @spacing-md;
+}
+
+.zhezu-editorial__card-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @spacing-sm;
+}

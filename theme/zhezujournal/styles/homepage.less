@@ -1,0 +1,240 @@
+/**
+ * homepage.less
+ *
+ * Styles for journal homepage: current issue block,
+ * CTA buttons, announcements section.
+ */
+
+@import 'variables.less';
+
+// ── Homepage Container ──────────────────────────────────────────────────────
+
+.zhezu-home {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    padding: @spacing-xl @spacing-md;
+}
+
+// ── Hero Section with CTA ───────────────────────────────────────────────────
+
+.zhezu-home__hero {
+    background: linear-gradient(135deg, @color-primary 0%, @color-primary-dark 100%);
+    color: @color-text-inverse;
+    border-radius: @border-radius-lg;
+    padding: @spacing-xxl @spacing-xl;
+    text-align: center;
+    margin-bottom: @spacing-xxl;
+}
+
+.zhezu-home__hero-title {
+    font-family: @font-serif;
+    font-size: @font-size-xxl;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-heading;
+    margin: 0 0 @spacing-md;
+}
+
+.zhezu-home__hero-subtitle {
+    font-size: @font-size-lg;
+    opacity: 0.85;
+    margin: 0 0 @spacing-xl;
+}
+
+.zhezu-home__cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: @spacing-md;
+}
+
+.zhezu-home__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: @spacing-sm;
+    padding: @spacing-md @spacing-xl;
+    font-family: @font-sans;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: @border-radius;
+    transition: background-color @transition-fast, transform @transition-fast, box-shadow @transition-fast;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: @shadow-md;
+    }
+
+    &--primary {
+        background-color: @color-secondary;
+        color: @color-primary;
+
+        &:hover {
+            background-color: @color-secondary-dark;
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: @color-text-inverse;
+        border: 2px solid @color-text-inverse;
+
+        &:hover {
+            background-color: fade(@color-text-inverse, 10%);
+        }
+    }
+}
+
+// ── Current Issue Block ─────────────────────────────────────────────────────
+
+.zhezu-home__current-issue {
+    margin-bottom: @spacing-xxl;
+}
+
+.zhezu-home__section-title {
+    font-family: @font-serif;
+    font-size: @font-size-h2;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-lg;
+    padding-bottom: @spacing-md;
+    border-bottom: 3px solid @color-secondary;
+    display: inline-block;
+}
+
+.zhezu-home__issue {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: @spacing-xl;
+}
+
+.zhezu-home__issue-cover {
+    text-align: center;
+
+    img {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        border-radius: @border-radius;
+        box-shadow: @shadow-md;
+    }
+}
+
+.zhezu-home__issue-info {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-md;
+}
+
+.zhezu-home__issue-title {
+    font-family: @font-serif;
+    font-size: @font-size-xl;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-secondary;
+        }
+    }
+}
+
+.zhezu-home__issue-meta {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+}
+
+// ── Article List ────────────────────────────────────────────────────────────
+
+.zhezu-home__articles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-md;
+}
+
+.zhezu-home__article-item {
+    padding: @spacing-md;
+    border: 1px solid @color-border-light;
+    border-radius: @border-radius;
+    transition: box-shadow @transition-fast, border-color @transition-fast;
+
+    &:hover {
+        box-shadow: @shadow-sm;
+        border-color: @color-border;
+    }
+}
+
+.zhezu-home__article-title {
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+    margin: 0 0 @spacing-xs;
+
+    a {
+        color: @color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color: @color-secondary;
+            text-decoration: underline;
+        }
+    }
+}
+
+.zhezu-home__article-authors {
+    font-size: @font-size-sm;
+    color: @color-text-light;
+    margin: 0;
+}
+
+// ── Announcements ───────────────────────────────────────────────────────────
+
+.zhezu-home__announcements {
+    margin-bottom: @spacing-xxl;
+}
+
+.zhezu-home__announcement-item {
+    padding: @spacing-lg;
+    background-color: @color-bg-alt;
+    border-radius: @border-radius;
+    margin-bottom: @spacing-md;
+    border-left: 4px solid @color-secondary;
+}
+
+.zhezu-home__announcement-title {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    color: @color-primary;
+    margin: 0 0 @spacing-sm;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.zhezu-home__announcement-date {
+    font-size: @font-size-xs;
+    color: @color-text-muted;
+    margin-bottom: @spacing-sm;
+}
+
+.zhezu-home__announcement-summary {
+    font-size: @font-size-sm;
+    color: @color-text;
+    line-height: @line-height-base;
+    margin: 0;
+}

@@ -1,0 +1,168 @@
+/**
+ * footer.less
+ *
+ * Styles for site footer: emblem, founder info, address,
+ * navigation links, founded year, analytics counter.
+ */
+
+@import 'variables.less';
+
+// ── Footer Block ────────────────────────────────────────────────────────────
+
+.zhezu-footer {
+    background-color: @color-primary;
+    color: @color-text-inverse;
+    padding: @spacing-xxl @spacing-md @spacing-lg;
+    margin-top: @spacing-section;
+}
+
+.zhezu-footer__inner {
+    max-width: @container-max-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: @spacing-xl;
+}
+
+// ── Branding Column ─────────────────────────────────────────────────────────
+
+.zhezu-footer__branding {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-md;
+}
+
+.zhezu-footer__logo {
+    img {
+        height: 56px;
+        width: auto;
+        display: block;
+        opacity: 0.9;
+    }
+}
+
+.zhezu-footer__title {
+    font-family: @font-serif;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-heading;
+    margin: 0;
+}
+
+.zhezu-footer__founder {
+    font-size: @font-size-sm;
+    opacity: 0.85;
+    line-height: @line-height-base;
+}
+
+.zhezu-footer__address {
+    font-size: @font-size-sm;
+    opacity: 0.8;
+    line-height: @line-height-base;
+    font-style: normal;
+}
+
+.zhezu-footer__founded {
+    font-size: @font-size-sm;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+// ── Navigation Column ───────────────────────────────────────────────────────
+
+.zhezu-footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-sm;
+}
+
+.zhezu-footer__nav-title {
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: @spacing-sm;
+    color: @color-secondary;
+}
+
+.zhezu-footer__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-sm;
+}
+
+.zhezu-footer__nav-link {
+    color: @color-text-inverse;
+    text-decoration: none;
+    font-size: @font-size-sm;
+    opacity: 0.85;
+    transition: opacity @transition-fast, color @transition-fast;
+
+    &:hover {
+        opacity: 1;
+        color: @color-secondary-light;
+    }
+}
+
+// ── Contact Column ──────────────────────────────────────────────────────────
+
+.zhezu-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: @spacing-sm;
+}
+
+.zhezu-footer__contact-title {
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: @spacing-sm;
+    color: @color-secondary;
+}
+
+.zhezu-footer__contact-item {
+    font-size: @font-size-sm;
+    opacity: 0.85;
+    display: flex;
+    align-items: flex-start;
+    gap: @spacing-sm;
+
+    a {
+        color: @color-text-inverse;
+        text-decoration: none;
+        transition: color @transition-fast;
+
+        &:hover {
+            color: @color-secondary-light;
+        }
+    }
+}
+
+// ── Bottom Bar ──────────────────────────────────────────────────────────────
+
+.zhezu-footer__bottom {
+    max-width: @container-max-width;
+    margin: @spacing-xl auto 0;
+    padding-top: @spacing-lg;
+    border-top: 1px solid fade(@color-text-inverse, 15%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: @spacing-md;
+    font-size: @font-size-xs;
+    opacity: 0.7;
+}
+
+.zhezu-footer__copyright {
+    margin: 0;
+}
+
+.zhezu-footer__metrics {
+    // Yandex.Metrika counter placeholder
+    display: inline-block;
+}

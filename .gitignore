@@ -1,0 +1,40 @@
+# Environment
+.env
+*.env.local
+
+# OJS config
+config.inc.php
+
+# Docker volumes
+docker/volumes/
+docker/data/
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# PHP
+vendor/
+composer.lock
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Backups
+backups/
+
+# Uploaded files
+files/

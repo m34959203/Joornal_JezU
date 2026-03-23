@@ -1,0 +1,127 @@
+version: "3.8"
+
+services:
+  # =============================================================
+  # OJS 3.4.x — PHP-FPM application
+  # =============================================================
+  ojs:
+    image: pkpofficial/ojs:3_4_0-8
+    container_name: ojs-app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      OJS_DB_HOST: db
+      OJS_DB_DRIVER: mysqli
+      OJS_DB_NAME: ${DB_NAME}
+      OJS_DB_USER: ${DB_USER}
+      OJS_DB_PASSWORD: ${DB_PASSWORD}
+      OJS_WEB_CONF: /etc/nginx/conf.d/ojs.conf
+      OJS_CONF: /var/www/html/config.inc.php
+    volumes:
+      - ojs_private_files:/var/private_files
+      - ojs_public_files:/var/www/html/public
+      - ojs_html:/var/www/html
+      - ojs_logs:/var/log/ojs
+      - ./php/php.ini:/usr/local/etc/php/conf.d/99-custom.ini:ro
+    networks:
+      - internal
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "php-fpm-healthcheck || kill -0 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # =============================================================
+  # MySQL 8.0 — database
+  # =============================================================
+  db:
+    image: mysql:8.0
+    container_name: ojs-db
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+      - --innodb-buffer-pool-size=256M
+      - --max-allowed-packet=64M
+      - --slow-query-log=1
+      - --slow-query-log-file=/var/log/mysql/slow.log
+      - --long-query-time=2
+    volumes:
+      - db_data:/var/lib/mysql
+      - db_logs:/var/log/mysql
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # =============================================================
+  # Nginx — reverse proxy
+  # =============================================================
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: ojs-nginx
+    restart: unless-stopped
+    ports:
+      - "${NGINX_HTTP_PORT:-80}:80"
+      - "${NGINX_HTTPS_PORT:-443}:443"
+    volumes:
+      - ./nginx/conf.d/ojs.conf:/etc/nginx/conf.d/default.conf:ro
+      - ojs_html:/var/www/html:ro
+      - ojs_public_files:/var/www/html/public:ro
+      - nginx_logs:/var/log/nginx
+      - certbot_etc:/etc/letsencrypt:ro
+      - certbot_www:/var/www/certbot:ro
+    networks:
+      - internal
+      - external
+    depends_on:
+      ojs:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO /dev/null http://localhost/nginx-health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  ojs_private_files:
+    driver: local
+  ojs_public_files:
+    driver: local
+  ojs_html:
+    driver: local
+  ojs_logs:
+    driver: local
+  db_data:
+    driver: local
+  db_logs:
+    driver: local
+  nginx_logs:
+    driver: local
+  certbot_etc:
+    driver: local
+  certbot_www:
+    driver: local
+
+networks:
+  internal:
+    driver: bridge
+    internal: true
+  external:
+    driver: bridge

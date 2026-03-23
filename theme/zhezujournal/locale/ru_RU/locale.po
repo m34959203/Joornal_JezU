@@ -1,0 +1,247 @@
+# Russian locale for ZhezuJournal theme
+# Вестник Жезказганского университета им. О.А. Байконурова
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: zhezujournal-theme 1.0.0\n"
+"POT-Creation-Date: 2026-03-23\n"
+"PO-Revision-Date: 2026-03-23\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+# ── Plugin Meta ──────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.name"
+msgstr "Тема ЖезУ Журнал"
+
+msgid "plugins.themes.zhezujournal.description"
+msgstr "Тема оформления для научного журнала «Вестник Жезказганского университета им. О.А. Байконурова»."
+
+# ── Theme Options ────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.option.primaryColor"
+msgstr "Основной цвет"
+
+msgid "plugins.themes.zhezujournal.option.secondaryColor"
+msgstr "Дополнительный цвет"
+
+msgid "plugins.themes.zhezujournal.option.baseFont"
+msgstr "Основной шрифт"
+
+msgid "plugins.themes.zhezujournal.option.systemFont"
+msgstr "Системный шрифт"
+
+# ── Header ───────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.header.journalTitle"
+msgstr "Вестник Жезказганского университета им. О.А. Байконурова"
+
+msgid "plugins.themes.zhezujournal.header.logoAlt"
+msgstr "Логотип журнала"
+
+msgid "plugins.themes.zhezujournal.header.issnPrint"
+msgstr "ISSN (печ.)"
+
+msgid "plugins.themes.zhezujournal.header.issnOnline"
+msgstr "ISSN (онлайн)"
+
+msgid "plugins.themes.zhezujournal.header.searchToggle"
+msgstr "Открыть поиск"
+
+msgid "plugins.themes.zhezujournal.header.searchPlaceholder"
+msgstr "Поиск по журналу..."
+
+msgid "plugins.themes.zhezujournal.header.login"
+msgstr "Войти"
+
+msgid "plugins.themes.zhezujournal.header.menuToggle"
+msgstr "Открыть меню"
+
+msgid "plugins.themes.zhezujournal.header.mainNav"
+msgstr "Основная навигация"
+
+msgid "plugins.themes.zhezujournal.header.mobileNav"
+msgstr "Мобильная навигация"
+
+# ── Navigation ───────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.nav.home"
+msgstr "Главная"
+
+msgid "plugins.themes.zhezujournal.nav.about"
+msgstr "О журнале"
+
+msgid "plugins.themes.zhezujournal.nav.forAuthors"
+msgstr "Для авторов"
+
+msgid "plugins.themes.zhezujournal.nav.peerReview"
+msgstr "Рецензирование"
+
+msgid "plugins.themes.zhezujournal.nav.archive"
+msgstr "Архив"
+
+msgid "plugins.themes.zhezujournal.nav.contacts"
+msgstr "Контакты"
+
+# ── Homepage ─────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.home.heroTitle"
+msgstr "Вестник Жезказганского университета"
+
+msgid "plugins.themes.zhezujournal.home.heroSubtitle"
+msgstr "Научный журнал, освещающий актуальные вопросы науки и образования"
+
+msgid "plugins.themes.zhezujournal.home.ctaSubmit"
+msgstr "Подать статью"
+
+msgid "plugins.themes.zhezujournal.home.ctaCurrent"
+msgstr "Текущий номер"
+
+msgid "plugins.themes.zhezujournal.home.currentIssue"
+msgstr "Текущий выпуск"
+
+msgid "plugins.themes.zhezujournal.home.published"
+msgstr "Опубликован"
+
+msgid "plugins.themes.zhezujournal.home.announcements"
+msgstr "Объявления"
+
+# ── Footer ───────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.footer.journalTitle"
+msgstr "Вестник Жезказганского университета им. О.А. Байконурова"
+
+msgid "plugins.themes.zhezujournal.footer.logoAlt"
+msgstr "Эмблема университета"
+
+msgid "plugins.themes.zhezujournal.footer.founder"
+msgstr "Учредитель: АО «Жезказганский университет им. О.А. Байконурова»"
+
+msgid "plugins.themes.zhezujournal.footer.address"
+msgstr "100600, г. Жезказган, пр. Алашахана, 1 Б"
+
+msgid "plugins.themes.zhezujournal.footer.foundedYear"
+msgstr "Журнал основан в 2004 году"
+
+msgid "plugins.themes.zhezujournal.footer.navTitle"
+msgstr "Навигация"
+
+msgid "plugins.themes.zhezujournal.footer.contactTitle"
+msgstr "Контакты"
+
+msgid "plugins.themes.zhezujournal.footer.email"
+msgstr "Электронная почта"
+
+msgid "plugins.themes.zhezujournal.footer.phone"
+msgstr "Телефон"
+
+msgid "plugins.themes.zhezujournal.footer.copyright"
+msgstr "Вестник ЖезУ. Все права защищены."
+
+# ── Breadcrumbs ──────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.breadcrumbs.label"
+msgstr "Навигационная цепочка"
+
+# ── Editorial Board ──────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.editorial.pageTitle"
+msgstr "Редакционная коллегия"
+
+msgid "plugins.themes.zhezujournal.editorial.chiefEditor"
+msgstr "Главный редактор"
+
+msgid "plugins.themes.zhezujournal.editorial.secretary"
+msgstr "Ответственный секретарь"
+
+msgid "plugins.themes.zhezujournal.editorial.members"
+msgstr "Члены редакционной коллегии"
+
+msgid "plugins.themes.zhezujournal.editorial.colName"
+msgstr "ФИО"
+
+msgid "plugins.themes.zhezujournal.editorial.colInfo"
+msgstr "Степень, звание, место работы"
+
+msgid "plugins.themes.zhezujournal.editorial.colProfiles"
+msgstr "Профили"
+
+# ── Article ──────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.article.abstract"
+msgstr "Аннотация"
+
+msgid "plugins.themes.zhezujournal.article.keywords"
+msgstr "Ключевые слова"
+
+msgid "plugins.themes.zhezujournal.article.references"
+msgstr "Список литературы"
+
+msgid "plugins.themes.zhezujournal.article.downloadPdf"
+msgstr "Скачать PDF"
+
+msgid "plugins.themes.zhezujournal.article.views"
+msgstr "Просмотры"
+
+msgid "plugins.themes.zhezujournal.article.downloads"
+msgstr "Загрузки"
+
+msgid "plugins.themes.zhezujournal.article.dateReceived"
+msgstr "Поступила"
+
+msgid "plugins.themes.zhezujournal.article.dateAccepted"
+msgstr "Одобрена"
+
+msgid "plugins.themes.zhezujournal.article.datePublished"
+msgstr "Опубликована"
+
+# ── Search ───────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.search.title"
+msgstr "Поиск"
+
+msgid "plugins.themes.zhezujournal.search.placeholder"
+msgstr "Введите поисковый запрос..."
+
+msgid "plugins.themes.zhezujournal.search.submit"
+msgstr "Найти"
+
+msgid "plugins.themes.zhezujournal.search.resultsFor"
+msgstr "Результаты поиска по запросу"
+
+msgid "plugins.themes.zhezujournal.search.noResults"
+msgstr "По вашему запросу ничего не найдено"
+
+msgid "plugins.themes.zhezujournal.search.noResultsHint"
+msgstr "Попробуйте изменить поисковый запрос или используйте другие ключевые слова"
+
+# ── Forms ────────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.form.required"
+msgstr "Обязательное поле"
+
+msgid "plugins.themes.zhezujournal.form.submit"
+msgstr "Отправить"
+
+msgid "plugins.themes.zhezujournal.form.cancel"
+msgstr "Отмена"
+
+msgid "plugins.themes.zhezujournal.form.uploadFile"
+msgstr "Загрузить файл"
+
+msgid "plugins.themes.zhezujournal.form.dragDrop"
+msgstr "Перетащите файл сюда или нажмите для выбора"
+
+# ── Archive ──────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.archive.title"
+msgstr "Архив номеров"
+
+msgid "plugins.themes.zhezujournal.archive.issueNumber"
+msgstr "№"
+
+msgid "plugins.themes.zhezujournal.archive.articles"
+msgstr "статей"

@@ -1,0 +1,40 @@
+# =============================================================
+# robots.txt — Zhezkazgan University Journal (OJS 3.4.x)
+# =============================================================
+
+User-agent: *
+
+# Public pages — allowed
+Allow: /
+Allow: /article/
+Allow: /issue/
+Allow: /about/
+Allow: /announcement/
+Allow: /information/
+Allow: /search/
+Allow: /sitemap.xml
+
+# Private / administrative pages — disallowed
+Disallow: /login
+Disallow: /user/register
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /management
+Disallow: /reviewer/
+Disallow: /submission/
+Disallow: /workflow/
+Disallow: /stats/
+Disallow: /api/
+Disallow: /gateway/
+Disallow: /lib/
+Disallow: /classes/
+Disallow: /cache/
+Disallow: /plugins/
+Disallow: /*?searchField=
+Disallow: /*?searchMatch=
+
+# Crawl rate
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: https://journal.zhezu.kz/sitemap.xml

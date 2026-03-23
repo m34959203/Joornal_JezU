@@ -1,0 +1,187 @@
+; <?php exit(); // DO NOT DELETE — security measure
+;
+; config.inc.php — OJS 3.4.x Configuration Template
+; Жезказган Университет — Вестник ЖезУ
+;
+; Placeholders %%VAR%% are substituted from .env at deploy time.
+; See scripts/setup-ojs.sh for the substitution logic.
+;
+
+;;;;;;;;;;;;;;;;;;
+; General Settings
+;;;;;;;;;;;;;;;;;;
+
+[general]
+
+installed = On
+base_url = "%%OJS_BASE_URL%%"
+session_cookie_name = OJSSID
+session_cookie_path = /
+session_lifetime = 30
+scheduled_tasks_off = Off
+time_zone = "Asia/Almaty"
+date_format_short = "%Y-%m-%d"
+date_format_long = "%B %e, %Y"
+datetime_format_short = "%Y-%m-%d %I:%M %p"
+datetime_format_long = "%B %e, %Y - %I:%M %p"
+allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li,dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p,table,tr,td,th,thead,tbody,h1,h2,h3,h4,h5,h6,blockquote,pre,span[class]"
+
+;;;;;;;;;;;;;
+; Database
+;;;;;;;;;;;;;
+
+[database]
+
+driver = mysqli
+host = db
+username = %%DB_USER%%
+password = %%DB_PASSWORD%%
+name = %%DB_NAME%%
+persistent = Off
+connection_charset = utf8mb4
+collation = utf8mb4_unicode_ci
+debug = Off
+
+;;;;;;;;;;
+; Files
+;;;;;;;;;;
+
+[files]
+
+files_dir = /var/www/files
+public_files_dir = public
+umask = 0022
+
+;;;;;;;;;;;;
+; Security
+;;;;;;;;;;;;
+
+[security]
+
+encryption = sha256
+api_key_secret = "%%API_KEY_SECRET%%"
+allowed_hosts = '["%%OJS_DOMAIN%%"]'
+force_login_ssl = On
+force_ssl = On
+session_check_ip = On
+implicit_auth = Off
+
+;;;;;;;;;
+; Email
+;;;;;;;;;
+
+[email]
+
+; Default envelope sender — used if no journal-specific sender is set
+default_envelope_sender = "%%SMTP_FROM%%"
+
+; SMTP Settings
+smtp = On
+smtp_server = "%%SMTP_HOST%%"
+smtp_port = %%SMTP_PORT%%
+smtp_auth = "%%SMTP_AUTH%%"
+smtp_username = "%%SMTP_USER%%"
+smtp_password = "%%SMTP_PASSWORD%%"
+; ssl | tls | '' (empty for none)
+smtp_encryption = "%%SMTP_ENCRYPTION%%"
+
+; Suppress email in dev mode (set to On to disable sending)
+smtp_suppress_cert_check = Off
+
+; Allow envelope sender override per journal
+allow_envelope_sender = On
+
+;;;;;;;;;
+; Cache
+;;;;;;;;;
+
+[cache]
+
+cache = file
+memcache_hostname = localhost
+memcache_port = 11211
+web_cache = Off
+web_cache_hours = 1
+
+;;;;;;;;;;;;;;;;
+; Localization
+;;;;;;;;;;;;;;;;
+
+[i18n]
+
+locale = ru_RU
+supported_locales = ["ru_RU","en_US","kk"]
+supported_form_locales = ["ru_RU","en_US","kk"]
+connection_charset = utf8mb4
+client_charset = utf-8
+database_charset = utf8mb4
+
+;;;;;;;;;
+; Proxy
+;;;;;;;;;
+
+[proxy]
+
+; http_host = localhost
+; http_port = 80
+; proxy_username =
+; proxy_password =
+
+;;;;;;;;;;;;;;
+; Captcha
+;;;;;;;;;;;;;;
+
+[captcha]
+
+recaptcha = Off
+recaptcha_public_key = "%%RECAPTCHA_PUBLIC_KEY%%"
+recaptcha_private_key = "%%RECAPTCHA_PRIVATE_KEY%%"
+
+;;;;;;;;;
+; OAI
+;;;;;;;;;
+
+[oai]
+
+oai = On
+repository_id = "%%OAI_REPOSITORY_ID%%"
+
+;;;;;;;;;;
+; Debug
+;;;;;;;;;;
+
+[debug]
+
+show_stacktrace = Off
+deprecation_warnings = Off
+display_errors = Off
+
+;;;;;;;;;;;;;
+; Search
+;;;;;;;;;;;;;
+
+[search]
+
+min_word_length = 3
+results_per_keyword = 500
+num_keywords_to_search = -1
+
+;;;;;;;;;;;;;;;
+; Scheduled Tasks
+;;;;;;;;;;;;;;;
+
+[scheduled_tasks]
+
+; Run via cron: php tools/runScheduledTasks.php
+; Recommended: every 4 hours
+
+;;;;;;;;;;;;;;;
+; CLI
+;;;;;;;;;;;;;;;
+
+[cli]
+
+; Allowed CLI tools
+; tools/importExport.php
+; tools/runScheduledTasks.php
+; tools/rebuildSearchIndex.php

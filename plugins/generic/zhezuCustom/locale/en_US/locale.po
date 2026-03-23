@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Language: en_US\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "plugins.generic.zhezuCustom.displayName"
+msgstr "ZhezU Custom Plugin"
+
+msgid "plugins.generic.zhezuCustom.description"
+msgstr "Custom features for Vestnik ZhezU journal: Yandex.Metrika, article statistics, issue download."
+
+msgid "plugins.generic.zhezuCustom.settings.metrikaId"
+msgstr "Yandex.Metrika Counter ID"
+
+msgid "plugins.generic.zhezuCustom.settings.metrikaId.description"
+msgstr "Enter your Yandex.Metrika counter numeric ID. Leave empty to disable."
+
+msgid "plugins.generic.zhezuCustom.settings.showArticleStats"
+msgstr "Show article statistics block on article page"
+
+msgid "plugins.generic.zhezuCustom.settings.showDownloadIssue"
+msgstr "Show 'Download full issue' button"
+
+msgid "plugins.generic.zhezuCustom.articleStats"
+msgstr "Article Statistics"
+
+msgid "plugins.generic.zhezuCustom.downloadFullIssue"
+msgstr "Download Full Issue"

@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Language: kk\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "plugins.generic.zhezuCustom.displayName"
+msgstr "ЖезУ арнайы плагині"
+
+msgid "plugins.generic.zhezuCustom.description"
+msgstr "«Вестник ЖезУ» журналына арналған қосымша функциялар: Яндекс.Метрика, мақала статистикасы, шығарылымды жүктеу."
+
+msgid "plugins.generic.zhezuCustom.settings.metrikaId"
+msgstr "Яндекс.Метрика есептегіш ID"
+
+msgid "plugins.generic.zhezuCustom.settings.metrikaId.description"
+msgstr "Яндекс.Метрика есептегішінің сандық ID-ін енгізіңіз. Өшіру үшін бос қалдырыңыз."
+
+msgid "plugins.generic.zhezuCustom.settings.showArticleStats"
+msgstr "Мақала бетінде статистика блогын көрсету"
+
+msgid "plugins.generic.zhezuCustom.settings.showDownloadIssue"
+msgstr "«Толық шығарылымды жүктеу» батырмасын көрсету"
+
+msgid "plugins.generic.zhezuCustom.articleStats"
+msgstr "Мақала статистикасы"
+
+msgid "plugins.generic.zhezuCustom.downloadFullIssue"
+msgstr "Толық шығарылымды жүктеп алу"

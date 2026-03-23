@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sample-article.xml — Пример статьи для OJS 3.4 Native Import Plugin
+  Формат: OJS Native XML (NativeImportExportPlugin)
+  Три языка: ru_RU, en_US, kk
+-->
+<issues xmlns="http://pkp.sfu.ca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+
+  <issue published="1" current="1" access_status="0">
+
+    <id type="internal" advice="ignore">1</id>
+
+    <issue_identification>
+      <volume>15</volume>
+      <number>2</number>
+      <year>2026</year>
+      <title locale="ru_RU">Выпуск 2 (2026)</title>
+      <title locale="en_US">Issue 2 (2026)</title>
+      <title locale="kk">2-шығарылым (2026)</title>
+    </issue_identification>
+
+    <date_published>2026-06-30</date_published>
+
+    <sections>
+      <section ref="articles" review_form_id="0" editor_restricted="0"
+               meta_indexed="1" meta_reviewed="1" abstracts_not_required="0"
+               hide_title="0" hide_author="0" abstract_word_count="300">
+        <id type="internal" advice="ignore">1</id>
+        <abbrev locale="ru_RU">Ст.</abbrev>
+        <abbrev locale="en_US">Art.</abbrev>
+        <abbrev locale="kk">Мақ.</abbrev>
+        <title locale="ru_RU">Научные статьи</title>
+        <title locale="en_US">Research Articles</title>
+        <title locale="kk">Ғылыми мақалалар</title>
+        <policy locale="ru_RU">Оригинальные исследования, ранее не публиковавшиеся.</policy>
+        <policy locale="en_US">Original research not previously published.</policy>
+        <policy locale="kk">Бұрын жарияланбаған түпнұсқа зерттеулер.</policy>
+      </section>
+    </sections>
+
+    <articles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+      <article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               status="3" stage="production"
+               date_submitted="2026-03-01" date_published="2026-06-30"
+               section_ref="articles" seq="1" access_status="0">
+
+        <id type="internal" advice="ignore">1</id>
+        <id type="doi">10.52371/vestnikzhezu.2026.15.2.001</id>
+
+        <!-- ─── Title ─── -->
+        <title locale="ru_RU">Влияние цифровых технологий на качество образования в региональных вузах Казахстана</title>
+        <title locale="en_US">Impact of Digital Technologies on Education Quality in Regional Universities of Kazakhstan</title>
+        <title locale="kk">Қазақстанның аймақтық жоғары оқу орындарындағы білім сапасына цифрлық технологиялардың әсері</title>
+
+        <!-- ─── Abstract ─── -->
+        <abstract locale="ru_RU"><![CDATA[
+В данной статье рассматривается влияние цифровых технологий на качество высшего образования в региональных вузах Казахстана на примере Жезказганского университета имени О.А. Байконурова. Проведён анализ внедрения систем управления обучением (LMS), электронных образовательных ресурсов и инструментов дистанционного обучения за период 2022–2025 гг. Методом анкетирования обследованы 450 студентов и 85 преподавателей. Результаты показали статистически значимое повышение академической успеваемости (на 12,3%, p&lt;0,05) и удовлетворённости образовательным процессом (на 18,7%) в группах с активным использованием цифровых инструментов. Выявлены основные барьеры цифровизации: недостаточная цифровая грамотность преподавателей (34%), техническая инфраструктура (28%) и мотивация студентов (21%). Предложены практические рекомендации по преодолению выявленных барьеров.
+        ]]></abstract>
+        <abstract locale="en_US"><![CDATA[
+This article examines the impact of digital technologies on the quality of higher education in regional universities of Kazakhstan, using Zhezkazgan University named after O.A. Baikonurov as a case study. An analysis of the implementation of learning management systems (LMS), electronic educational resources, and distance learning tools during 2022–2025 was conducted. A survey of 450 students and 85 faculty members was carried out. The results showed a statistically significant improvement in academic performance (12.3%, p<0.05) and satisfaction with the educational process (18.7%) in groups actively using digital tools. The main barriers to digitalization were identified: insufficient digital literacy of faculty (34%), technical infrastructure (28%), and student motivation (21%). Practical recommendations for overcoming the identified barriers are proposed.
+        ]]></abstract>
+        <abstract locale="kk"><![CDATA[
+Бұл мақалада Қазақстанның аймақтық жоғары оқу орындарындағы білім сапасына цифрлық технологиялардың әсері О.А. Байқоңыров атындағы Жезқазған университетінің мысалында қарастырылады. 2022–2025 жж. аралығында оқуды басқару жүйелерін (LMS), электронды білім беру ресурстарын және қашықтықтан оқыту құралдарын енгізу талданды. 450 студент пен 85 оқытушыға сауалнама жүргізілді. Нәтижелер цифрлық құралдарды белсенді пайдаланатын топтарда академиялық үлгерімнің статистикалық маңызды жоғарылағанын (12,3%, p&lt;0,05) және білім беру процесіне қанағаттанудың артқанын (18,7%) көрсетті. Цифрландырудың негізгі кедергілері анықталды: оқытушылардың цифрлық сауаттылығының жеткіліксіздігі (34%), техникалық инфрақұрылым (28%) және студенттердің ынтасы (21%).
+        ]]></abstract>
+
+        <!-- ─── Keywords ─── -->
+        <keywords locale="ru_RU">
+          <keyword>цифровые технологии</keyword>
+          <keyword>качество образования</keyword>
+          <keyword>региональные вузы</keyword>
+          <keyword>LMS</keyword>
+          <keyword>дистанционное обучение</keyword>
+          <keyword>Казахстан</keyword>
+        </keywords>
+        <keywords locale="en_US">
+          <keyword>digital technologies</keyword>
+          <keyword>education quality</keyword>
+          <keyword>regional universities</keyword>
+          <keyword>LMS</keyword>
+          <keyword>distance learning</keyword>
+          <keyword>Kazakhstan</keyword>
+        </keywords>
+        <keywords locale="kk">
+          <keyword>цифрлық технологиялар</keyword>
+          <keyword>білім сапасы</keyword>
+          <keyword>аймақтық жоғары оқу орындары</keyword>
+          <keyword>LMS</keyword>
+          <keyword>қашықтықтан оқыту</keyword>
+          <keyword>Қазақстан</keyword>
+        </keywords>
+
+        <!-- ─── Authors ─── -->
+        <authors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+          <author primary_contact="true" include_in_browse="true" user_group_ref="Author">
+            <givenname locale="ru_RU">Айгуль</givenname>
+            <givenname locale="en_US">Aigul</givenname>
+            <givenname locale="kk">Айгүл</givenname>
+            <familyname locale="ru_RU">Сериков</familyname>
+            <familyname locale="en_US">Serikova</familyname>
+            <familyname locale="kk">Серікова</familyname>
+            <affiliation locale="ru_RU">Жезказганский университет им. О.А. Байконурова, кафедра информатики и цифровых технологий</affiliation>
+            <affiliation locale="en_US">Zhezkazgan University named after O.A. Baikonurov, Department of Computer Science and Digital Technologies</affiliation>
+            <affiliation locale="kk">О.А. Байқоңыров атындағы Жезқазған университеті, информатика және цифрлық технологиялар кафедрасы</affiliation>
+            <country>KZ</country>
+            <email>a.serikova@zhezu.edu.kz</email>
+            <orcid>https://orcid.org/0000-0002-1234-5678</orcid>
+            <biography locale="ru_RU"><![CDATA[Кандидат педагогических наук, доцент кафедры информатики и цифровых технологий Жезказганского университета. Область научных интересов: цифровизация образования, EdTech.]]></biography>
+            <biography locale="en_US"><![CDATA[PhD in Pedagogical Sciences, Associate Professor at the Department of Computer Science and Digital Technologies, Zhezkazgan University. Research interests: digitalization of education, EdTech.]]></biography>
+          </author>
+
+          <author primary_contact="false" include_in_browse="true" user_group_ref="Author">
+            <givenname locale="ru_RU">Бауыржан</givenname>
+            <givenname locale="en_US">Bauyrzhan</givenname>
+            <givenname locale="kk">Бауыржан</givenname>
+            <familyname locale="ru_RU">Касымов</familyname>
+            <familyname locale="en_US">Kassymov</familyname>
+            <familyname locale="kk">Қасымов</familyname>
+            <affiliation locale="ru_RU">Жезказганский университет им. О.А. Байконурова, кафедра педагогики</affiliation>
+            <affiliation locale="en_US">Zhezkazgan University named after O.A. Baikonurov, Department of Pedagogy</affiliation>
+            <affiliation locale="kk">О.А. Байқоңыров атындағы Жезқазған университеті, педагогика кафедрасы</affiliation>
+            <country>KZ</country>
+            <email>b.kassymov@zhezu.edu.kz</email>
+            <orcid>https://orcid.org/0000-0003-9876-5432</orcid>
+          </author>
+
+        </authors>
+
+        <!-- ─── Pages ─── -->
+        <pages>12-28</pages>
+
+        <!-- ─── Submission File / Galley ─── -->
+        <submission_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         stage="proof" id="1"
+                         xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+          <revision number="1" genre="Article Text"
+                    filename="serikova-kassymov-digital-education-2026.pdf"
+                    viewable="true" date_uploaded="2026-06-15" date_modified="2026-06-15"
+                    filesize="524288" filetype="application/pdf"
+                    uploader="admin">
+            <name locale="ru_RU">serikova-kassymov-digital-education-2026.pdf</name>
+            <name locale="en_US">serikova-kassymov-digital-education-2026.pdf</name>
+            <!-- href: path to actual PDF file relative to import directory -->
+            <href src="serikova-kassymov-digital-education-2026.pdf" mime_type="application/pdf"/>
+          </revision>
+        </submission_file>
+
+        <article_galley xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" approved="true"
+                        xsi:schemaLocation="http://pkp.sfu.ca native.xsd">
+          <id type="internal" advice="ignore">1</id>
+          <name locale="ru_RU">PDF</name>
+          <name locale="en_US">PDF</name>
+          <name locale="kk">PDF</name>
+          <seq>0</seq>
+          <submission_file_ref id="1" revision="1"/>
+        </article_galley>
+
+        <!-- ─── License ─── -->
+        <licenseUrl>https://creativecommons.org/licenses/by/4.0/</licenseUrl>
+        <copyrightHolder locale="ru_RU">Серикова А., Касымов Б.</copyrightHolder>
+        <copyrightHolder locale="en_US">Serikova A., Kassymov B.</copyrightHolder>
+        <copyrightYear>2026</copyrightYear>
+
+      </article>
+
+    </articles>
+
+  </issue>
+
+</issues>

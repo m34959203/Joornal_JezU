@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+<!--
+  version.xml — ZhezU Custom Plugin for OJS 3.4.x
+  Жезказган Университет / Saryarka AI Lab
+-->
+<version>
+	<application>zhezuCustom</application>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2026-03-23</date>
+	<lazy-load>1</lazy-load>
+	<class>APP\plugins\generic\zhezuCustom\ZhezuCustomPlugin</class>
+
+	<compatibility application="ojs2">
+		<version>3.4.0.0</version>
+		<version>3.4.0.1</version>
+		<version>3.4.0.2</version>
+		<version>3.4.0.3</version>
+		<version>3.4.0.4</version>
+		<version>3.4.0.5</version>
+	</compatibility>
+</version>

@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Language: ru_RU\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "plugins.generic.zhezuCustom.displayName"
+msgstr "Пользовательский плагин ЖезУ"
+
+msgid "plugins.generic.zhezuCustom.description"
+msgstr "Дополнительные функции для журнала «Вестник ЖезУ»: Яндекс.Метрика, статистика статей, загрузка выпуска."
+
+msgid "plugins.generic.zhezuCustom.settings.metrikaId"
+msgstr "ID счётчика Яндекс.Метрики"
+
+msgid "plugins.generic.zhezuCustom.settings.metrikaId.description"
+msgstr "Введите числовой ID вашего счётчика Яндекс.Метрики. Оставьте пустым, чтобы отключить."
+
+msgid "plugins.generic.zhezuCustom.settings.showArticleStats"
+msgstr "Показывать блок статистики на странице статьи"
+
+msgid "plugins.generic.zhezuCustom.settings.showDownloadIssue"
+msgstr "Показывать кнопку «Скачать весь номер»"
+
+msgid "plugins.generic.zhezuCustom.articleStats"
+msgstr "Статистика статьи"
+
+msgid "plugins.generic.zhezuCustom.downloadFullIssue"
+msgstr "Скачать весь номер"

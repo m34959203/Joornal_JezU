@@ -1,0 +1,739 @@
+# Kazakh (kk) locale for OJS 3.4.x
+# Вестник ЖезУ — Жезказган Университет
+# Copyright (c) 2026 Saryarka AI Lab
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OJS 3.4.x kk\n"
+"Report-Msgid-Bugs-To: vestnik@zhezu.edu.kz\n"
+"POT-Creation-Date: 2026-03-23 00:00+0600\n"
+"PO-Revision-Date: 2026-03-23 00:00+0600\n"
+"Last-Translator: Saryarka AI Lab <dev@zhezu.edu.kz>\n"
+"Language-Team: Kazakh <kk@zhezu.edu.kz>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Navigation / Навигация
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "navigation.home"
+msgstr "Басты бет"
+
+msgid "navigation.about"
+msgstr "Журнал туралы"
+
+msgid "navigation.current"
+msgstr "Ағымдағы шығарылым"
+
+msgid "navigation.archives"
+msgstr "Мұрағат"
+
+msgid "navigation.announcements"
+msgstr "Хабарландырулар"
+
+msgid "navigation.editorial"
+msgstr "Редакция алқасы"
+
+msgid "navigation.submissions"
+msgstr "Мақала жіберу"
+
+msgid "navigation.search"
+msgstr "Іздеу"
+
+msgid "navigation.register"
+msgstr "Тіркелу"
+
+msgid "navigation.login"
+msgstr "Кіру"
+
+msgid "navigation.logout"
+msgstr "Шығу"
+
+msgid "navigation.dashboard"
+msgstr "Басқару тақтасы"
+
+msgid "navigation.profile"
+msgstr "Профиль"
+
+msgid "navigation.contact"
+msgstr "Байланыс"
+
+msgid "navigation.for.authors"
+msgstr "Авторларға"
+
+msgid "navigation.for.reviewers"
+msgstr "Рецензенттерге"
+
+msgid "navigation.for.readers"
+msgstr "Оқырмандарға"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Buttons / Кнопки
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "common.submit"
+msgstr "Жіберу"
+
+msgid "common.save"
+msgstr "Сақтау"
+
+msgid "common.cancel"
+msgstr "Бас тарту"
+
+msgid "common.delete"
+msgstr "Жою"
+
+msgid "common.edit"
+msgstr "Өңдеу"
+
+msgid "common.close"
+msgstr "Жабу"
+
+msgid "common.upload"
+msgstr "Жүктеу"
+
+msgid "common.download"
+msgstr "Жүктеп алу"
+
+msgid "common.search"
+msgstr "Іздеу"
+
+msgid "common.back"
+msgstr "Артқа"
+
+msgid "common.next"
+msgstr "Келесі"
+
+msgid "common.previous"
+msgstr "Алдыңғы"
+
+msgid "common.continue"
+msgstr "Жалғастыру"
+
+msgid "common.confirm"
+msgstr "Растау"
+
+msgid "common.reset"
+msgstr "Қалпына келтіру"
+
+msgid "common.ok"
+msgstr "Жарайды"
+
+msgid "common.yes"
+msgstr "Иә"
+
+msgid "common.no"
+msgstr "Жоқ"
+
+msgid "common.add"
+msgstr "Қосу"
+
+msgid "common.remove"
+msgstr "Алып тастау"
+
+msgid "common.view"
+msgstr "Қарау"
+
+msgid "common.filter"
+msgstr "Сүзгі"
+
+msgid "common.moreActions"
+msgstr "Қосымша әрекеттер"
+
+msgid "common.selectAll"
+msgstr "Барлығын таңдау"
+
+msgid "common.required"
+msgstr "Міндетті"
+
+msgid "common.optional"
+msgstr "Міндетті емес"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Login / Registration
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "user.login"
+msgstr "Кіру"
+
+msgid "user.login.username"
+msgstr "Пайдаланушы аты"
+
+msgid "user.login.password"
+msgstr "Құпия сөз"
+
+msgid "user.login.rememberMe"
+msgstr "Мені есте сақтау"
+
+msgid "user.login.forgotPassword"
+msgstr "Құпия сөзді ұмыттыңыз ба?"
+
+msgid "user.login.resetPassword"
+msgstr "Құпия сөзді қалпына келтіру"
+
+msgid "user.login.loginError"
+msgstr "Пайдаланушы аты немесе құпия сөз дұрыс емес."
+
+msgid "user.register"
+msgstr "Тіркелу"
+
+msgid "user.register.form.firstName"
+msgstr "Аты"
+
+msgid "user.register.form.lastName"
+msgstr "Тегі"
+
+msgid "user.register.form.middleName"
+msgstr "Әкесінің аты"
+
+msgid "user.register.form.email"
+msgstr "Электрондық пошта"
+
+msgid "user.register.form.username"
+msgstr "Пайдаланушы аты"
+
+msgid "user.register.form.password"
+msgstr "Құпия сөз"
+
+msgid "user.register.form.confirmPassword"
+msgstr "Құпия сөзді растаңыз"
+
+msgid "user.register.form.country"
+msgstr "Ел"
+
+msgid "user.register.form.affiliation"
+msgstr "Ұйым"
+
+msgid "user.register.form.orcid"
+msgstr "ORCID идентификаторы"
+
+msgid "user.register.form.phone"
+msgstr "Телефон"
+
+msgid "user.register.form.mailingAddress"
+msgstr "Пошталық мекенжай"
+
+msgid "user.register.form.bio"
+msgstr "Өмірбаян"
+
+msgid "user.register.complete"
+msgstr "Тіркеу сәтті аяқталды."
+
+msgid "user.register.alreadyRegistered"
+msgstr "Сіз бұрын тіркелгенсіз."
+
+# ═══════════════════════════════════════════════════════════════════════
+# Roles / Рөлдер
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "user.role.admin"
+msgstr "Әкімші"
+
+msgid "user.role.manager"
+msgstr "Журнал менеджері"
+
+msgid "user.role.editor"
+msgstr "Редактор"
+
+msgid "user.role.sectionEditor"
+msgstr "Бөлім редакторы"
+
+msgid "user.role.reviewer"
+msgstr "Рецензент"
+
+msgid "user.role.author"
+msgstr "Автор"
+
+msgid "user.role.reader"
+msgstr "Оқырман"
+
+msgid "user.role.copyeditor"
+msgstr "Әдеби редактор"
+
+msgid "user.role.layoutEditor"
+msgstr "Беттеуші"
+
+msgid "user.role.proofreader"
+msgstr "Корректор"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Article / Submission
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "article.title"
+msgstr "Мақала тақырыбы"
+
+msgid "article.abstract"
+msgstr "Аңдатпа"
+
+msgid "article.keywords"
+msgstr "Кілт сөздер"
+
+msgid "article.authors"
+msgstr "Авторлар"
+
+msgid "article.pages"
+msgstr "Беттер"
+
+msgid "article.doi"
+msgstr "DOI"
+
+msgid "article.datePublished"
+msgstr "Жарияланған күні"
+
+msgid "article.dateSubmitted"
+msgstr "Жіберілген күні"
+
+msgid "article.references"
+msgstr "Пайдаланылған әдебиеттер"
+
+msgid "article.pdf"
+msgstr "PDF"
+
+msgid "article.fullText"
+msgstr "Толық мәтін"
+
+msgid "article.galleys"
+msgstr "Мақала файлдары"
+
+msgid "article.supplementaryFiles"
+msgstr "Қосымша файлдар"
+
+msgid "article.license"
+msgstr "Лицензия"
+
+msgid "article.copyright"
+msgstr "Авторлық құқық"
+
+msgid "article.howToCite"
+msgstr "Дәйексөз жасау тәсілі"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Submission workflow / Жұмыс процесі
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "submission.submit"
+msgstr "Мақала жіберу"
+
+msgid "submission.submit.newSubmission"
+msgstr "Жаңа мақала жіберу"
+
+msgid "submission.submit.step1"
+msgstr "1-қадам: Бастау"
+
+msgid "submission.submit.step2"
+msgstr "2-қадам: Файлды жүктеу"
+
+msgid "submission.submit.step3"
+msgstr "3-қадам: Метадеректерді енгізу"
+
+msgid "submission.submit.step4"
+msgstr "4-қадам: Растау"
+
+msgid "submission.submit.step5"
+msgstr "5-қадам: Келесі қадамдар"
+
+msgid "submission.submit.upload.manuscriptFile"
+msgstr "Мақала файлын жүктеңіз"
+
+msgid "submission.submit.upload.supplementaryFile"
+msgstr "Қосымша файл жүктеңіз"
+
+msgid "submission.submit.metadata.title"
+msgstr "Мақала тақырыбы"
+
+msgid "submission.submit.metadata.abstract"
+msgstr "Аңдатпа"
+
+msgid "submission.submit.metadata.keywords"
+msgstr "Кілт сөздер"
+
+msgid "submission.submit.metadata.language"
+msgstr "Мақала тілі"
+
+msgid "submission.submit.confirmation"
+msgstr "Мақала сәтті жіберілді."
+
+msgid "submission.submit.thankYou"
+msgstr "Мақалаңызды жібергеніңіз үшін рахмет!"
+
+msgid "submission.submit.checklist"
+msgstr "Жіберу талаптарын тексеру"
+
+msgid "submission.submit.coverLetter"
+msgstr "Ілеспе хат"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Submission statuses / Мақала мәртебелері
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "submission.status.queued"
+msgstr "Кезекте"
+
+msgid "submission.status.submitted"
+msgstr "Жіберілді"
+
+msgid "submission.status.review"
+msgstr "Рецензиялауда"
+
+msgid "submission.status.editing"
+msgstr "Редакциялауда"
+
+msgid "submission.status.production"
+msgstr "Жариялау дайындығында"
+
+msgid "submission.status.published"
+msgstr "Жарияланды"
+
+msgid "submission.status.declined"
+msgstr "Қабылданбады"
+
+msgid "submission.status.incomplete"
+msgstr "Аяқталмаған"
+
+msgid "submission.status.revisions"
+msgstr "Түзетулер қажет"
+
+msgid "submission.status.accepted"
+msgstr "Қабылданды"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Review / Рецензиялау
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "review.title"
+msgstr "Рецензиялау"
+
+msgid "review.recommendation"
+msgstr "Ұсыныс"
+
+msgid "review.recommendation.accept"
+msgstr "Қабылдау"
+
+msgid "review.recommendation.revisions.required"
+msgstr "Түзетулер қажет"
+
+msgid "review.recommendation.resubmit"
+msgstr "Қайта жіберу"
+
+msgid "review.recommendation.decline"
+msgstr "Қабылдамау"
+
+msgid "review.recommendation.seeComments"
+msgstr "Пікірлерді қараңыз"
+
+msgid "review.comments"
+msgstr "Рецензенттің пікірлері"
+
+msgid "review.commentsForAuthor"
+msgstr "Автор үшін пікірлер"
+
+msgid "review.commentsForEditor"
+msgstr "Редактор үшін пікірлер"
+
+msgid "review.dueDate"
+msgstr "Мерзімі"
+
+msgid "review.type.blind"
+msgstr "Жасырын рецензиялау"
+
+msgid "review.type.doubleBlind"
+msgstr "Қос жасырын рецензиялау"
+
+msgid "review.type.open"
+msgstr "Ашық рецензиялау"
+
+msgid "review.accept"
+msgstr "Рецензиялауға келісу"
+
+msgid "review.decline"
+msgstr "Рецензиялаудан бас тарту"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Issue / Шығарылым
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "issue.current"
+msgstr "Ағымдағы шығарылым"
+
+msgid "issue.archive"
+msgstr "Мұрағат"
+
+msgid "issue.volume"
+msgstr "Том"
+
+msgid "issue.number"
+msgstr "Нөмір"
+
+msgid "issue.year"
+msgstr "Жыл"
+
+msgid "issue.published"
+msgstr "Жарияланған"
+
+msgid "issue.tableOfContents"
+msgstr "Мазмұны"
+
+msgid "issue.fullIssue"
+msgstr "Толық шығарылым"
+
+msgid "issue.downloadFull"
+msgstr "Толық шығарылымды жүктеп алу"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Search / Іздеу
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "search.title"
+msgstr "Іздеу"
+
+msgid "search.query"
+msgstr "Іздеу сұранысы"
+
+msgid "search.results"
+msgstr "Іздеу нәтижелері"
+
+msgid "search.noResults"
+msgstr "Нәтиже табылмады."
+
+msgid "search.advancedSearch"
+msgstr "Кеңейтілген іздеу"
+
+msgid "search.searchByAuthor"
+msgstr "Автор бойынша іздеу"
+
+msgid "search.searchByTitle"
+msgstr "Тақырып бойынша іздеу"
+
+msgid "search.searchByKeyword"
+msgstr "Кілт сөз бойынша іздеу"
+
+msgid "search.dateFrom"
+msgstr "Бастапқы күні"
+
+msgid "search.dateTo"
+msgstr "Аяқталу күні"
+
+# ═══════════════════════════════════════════════════════════════════════
+# About / Журнал туралы
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "about.aboutJournal"
+msgstr "Журнал туралы"
+
+msgid "about.editorialTeam"
+msgstr "Редакция алқасы"
+
+msgid "about.submissions"
+msgstr "Мақала жіберу ережелері"
+
+msgid "about.contact"
+msgstr "Байланыс"
+
+msgid "about.peerReviewProcess"
+msgstr "Рецензиялау процесі"
+
+msgid "about.publicationEthics"
+msgstr "Жариялау этикасы"
+
+msgid "about.openAccessPolicy"
+msgstr "Ашық қолжетімділік саясаты"
+
+msgid "about.journalHistory"
+msgstr "Журнал тарихы"
+
+msgid "about.focusAndScope"
+msgstr "Тақырыптық бағыттар мен ауқымы"
+
+msgid "about.authorGuidelines"
+msgstr "Авторларға нұсқаулық"
+
+msgid "about.reviewerGuidelines"
+msgstr "Рецензенттерге нұсқаулық"
+
+msgid "about.privacyStatement"
+msgstr "Құпиялылық саясаты"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Settings / Параметрлер
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "manager.settings"
+msgstr "Параметрлер"
+
+msgid "manager.settings.journal"
+msgstr "Журнал параметрлері"
+
+msgid "manager.settings.website"
+msgstr "Веб-сайт"
+
+msgid "manager.settings.workflow"
+msgstr "Жұмыс процесі"
+
+msgid "manager.settings.distribution"
+msgstr "Тарату"
+
+msgid "manager.plugins"
+msgstr "Плагиндер"
+
+msgid "manager.plugins.settings"
+msgstr "Плагин параметрлері"
+
+msgid "manager.users"
+msgstr "Пайдаланушылар"
+
+msgid "manager.tools"
+msgstr "Құралдар"
+
+msgid "manager.statistics"
+msgstr "Статистика"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Page headings / Беттер тақырыптары
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "page.indexJournal"
+msgstr "Журнал"
+
+msgid "page.userDashboard"
+msgstr "Басқару тақтасы"
+
+msgid "page.submissions"
+msgstr "Мақалалар"
+
+msgid "page.editorialBoard"
+msgstr "Редакция алқасы"
+
+msgid "page.informationForAuthors"
+msgstr "Авторларға ақпарат"
+
+msgid "page.informationForReviewers"
+msgstr "Рецензенттерге ақпарат"
+
+msgid "page.informationForReaders"
+msgstr "Оқырмандарға ақпарат"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Forms / Формалар
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "form.fieldRequired"
+msgstr "Бұл өрісті толтыру міндетті."
+
+msgid "form.validationError"
+msgstr "Формада қателер бар. Тексеріңіз."
+
+msgid "form.savedSuccessfully"
+msgstr "Сәтті сақталды."
+
+msgid "form.selectOne"
+msgstr "Біреуін таңдаңыз"
+
+msgid "form.fileRequired"
+msgstr "Файл жүктеу міндетті."
+
+msgid "form.invalidEmail"
+msgstr "Электрондық пошта мекенжайы дұрыс емес."
+
+msgid "form.passwordMismatch"
+msgstr "Құпия сөздер сәйкес келмейді."
+
+msgid "form.urlRequired"
+msgstr "URL мекенжайын енгізіңіз."
+
+# ═══════════════════════════════════════════════════════════════════════
+# Statistics / Статистика
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "stats.views"
+msgstr "Қаралымдар"
+
+msgid "stats.downloads"
+msgstr "Жүктеулер"
+
+msgid "stats.articleViews"
+msgstr "Мақаланы қарау саны"
+
+msgid "stats.pdfDownloads"
+msgstr "PDF жүктеулер саны"
+
+msgid "stats.total"
+msgstr "Барлығы"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Notifications / Хабарламалар
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "notification.success"
+msgstr "Сәтті орындалды."
+
+msgid "notification.error"
+msgstr "Қате орын алды."
+
+msgid "notification.warning"
+msgstr "Ескерту."
+
+msgid "notification.info"
+msgstr "Ақпарат."
+
+msgid "notification.newSubmission"
+msgstr "Жаңа мақала келіп түсті."
+
+msgid "notification.reviewAssignment"
+msgstr "Сізге рецензия тапсырылды."
+
+msgid "notification.revisionRequired"
+msgstr "Мақалаңызға түзетулер қажет."
+
+msgid "notification.submissionAccepted"
+msgstr "Мақалаңыз қабылданды."
+
+msgid "notification.submissionDeclined"
+msgstr "Мақалаңыз қабылданбады."
+
+# ═══════════════════════════════════════════════════════════════════════
+# Email templates
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "email.subject.submissionAck"
+msgstr "Мақалаңыз қабылданды"
+
+msgid "email.subject.reviewRequest"
+msgstr "Рецензия сұранысы"
+
+msgid "email.subject.editorDecision"
+msgstr "Мақалаңыз бойынша шешім"
+
+# ═══════════════════════════════════════════════════════════════════════
+# Footer / Төменгі блок
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "footer.poweredBy"
+msgstr "OJS жүйесімен жұмыс істейді"
+
+msgid "footer.copyright"
+msgstr "Барлық құқықтар қорғалған"
+
+msgid "footer.publishedBy"
+msgstr "Шығарушы"
+
+# ═══════════════════════════════════════════════════════════════════════
+# ZhezU Custom Plugin
+# ═══════════════════════════════════════════════════════════════════════
+
+msgid "plugins.generic.zhezuCustom.displayName"
+msgstr "ЖезУ арнайы плагині"
+
+msgid "plugins.generic.zhezuCustom.description"
+msgstr "Жезқазған университетінің «Вестник ЖезУ» журналына арналған арнайы функциялар."
+
+msgid "plugins.generic.zhezuCustom.articleStats"
+msgstr "Мақала статистикасы"
+
+msgid "plugins.generic.zhezuCustom.downloadFullIssue"
+msgstr "Толық шығарылымды жүктеп алу"

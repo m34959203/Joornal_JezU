@@ -1,0 +1,1248 @@
+/**
+ * zhezujournal.css
+ *
+ * Custom CSS overrides for OJS 3.4 default theme.
+ * Journal: Vestnik ZhezU (Zhezkazgan University)
+ *
+ * Brand colors:
+ *   Primary:   #1B3A5C (dark navy)
+ *   Secondary: #C8A84E (gold)
+ *   Accent:    #2563EB (blue)
+ *
+ * Converted from LESS sources in theme/zhezujournal/styles/
+ */
+
+/* ── Google Fonts (Academic: Crimson Pro + Atkinson Hyperlegible) ─────────── */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── CSS Custom Properties ────────────────────────────────────────────────── */
+:root {
+  /* Colors — Academic navy + gold palette */
+  --zj-primary: #1B3A5C;
+  --zj-primary-light: #2a5580;
+  --zj-primary-dark: #142d48;
+  --zj-secondary: #C8A84E;
+  --zj-secondary-light: #d4b96a;
+  --zj-secondary-dark: #b19340;
+  --zj-accent: #2563EB;
+  --zj-accent-light: #3b82f6;
+  --zj-accent-dark: #1d4ed8;
+
+  --zj-bg: #FFFFFF;
+  --zj-bg-alt: #F5F5F5;
+  --zj-bg-dark: #1B3A5C;
+  --zj-text: #333333;
+  --zj-text-light: #666666;
+  --zj-text-muted: #999999;
+  --zj-text-inverse: #FFFFFF;
+  --zj-border: #E0E0E0;
+  --zj-border-light: #EEEEEE;
+  --zj-error: #D32F2F;
+  --zj-success: #2E7D32;
+
+  /* Typography — Academic/Research pairing */
+  --zj-font-sans: 'Atkinson Hyperlegible', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --zj-font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --zj-font-mono: 'JetBrains Mono', Consolas, monospace;
+
+  /* Spacing */
+  --zj-spacing-xs: 4px;
+  --zj-spacing-sm: 8px;
+  --zj-spacing-md: 16px;
+  --zj-spacing-lg: 24px;
+  --zj-spacing-xl: 32px;
+  --zj-spacing-xxl: 48px;
+  --zj-spacing-section: 64px;
+
+  /* Layout — Swiss modernism: tight radii, mathematical spacing */
+  --zj-container: 1200px;
+  --zj-radius: 2px;
+  --zj-radius-lg: 4px;
+
+  /* Shadows — minimal for academic feel */
+  --zj-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --zj-shadow-md: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --zj-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --zj-shadow-header: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   1. GENERAL / BASE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+body {
+  font-family: var(--zj-font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--zj-text);
+  background-color: var(--zj-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--zj-primary);
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--zj-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--zj-font-serif);
+  line-height: 1.3;
+  color: var(--zj-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2. HEADER — OJS .pkp_structure_head override
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* -- 2a. Top bar with ISSN (pseudo-element on header) -- */
+.pkp_structure_head {
+  position: relative;
+  box-shadow: var(--zj-shadow-header);
+}
+
+.pkp_structure_head::before {
+  content: 'ISSN 2958-657X (Print)  |  ISSN 2959-2216 (Online)';
+  display: block;
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+  font-family: var(--zj-font-mono);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 4px 16px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* -- 2b. Site name / logo area -- */
+.pkp_site_name {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding: var(--zj-spacing-md);
+}
+
+.pkp_site_name a {
+  text-decoration: none;
+  color: var(--zj-primary);
+  transition: color 0.15s ease;
+}
+
+.pkp_site_name a:hover {
+  color: var(--zj-primary-dark);
+}
+
+.pkp_site_name .is_text {
+  font-family: var(--zj-font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  line-height: 1.3;
+}
+
+.pkp_site_name .is_img img {
+  max-height: 72px;
+  width: auto;
+}
+
+/* Journal description under site name */
+.pkp_site_name_wrapper .pkp_site_name + .pkp_site_description,
+.pkp_head_wrapper .pkp_site_name + p {
+  font-size: 14px;
+  color: var(--zj-text-light);
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding: 0 var(--zj-spacing-md) var(--zj-spacing-sm);
+}
+
+/* -- 2c. Primary navigation menu -- */
+.pkp_navigation_primary {
+  background-color: var(--zj-bg);
+  border-top: 1px solid var(--zj-border-light);
+  border-bottom: 2px solid var(--zj-primary);
+}
+
+.pkp_navigation_primary > ul,
+.pkp_navigation_primary .pkp_nav_list {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding: 0 var(--zj-spacing-md);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+.pkp_navigation_primary li {
+  position: relative;
+}
+
+.pkp_navigation_primary a {
+  display: block;
+  padding: var(--zj-spacing-md) var(--zj-spacing-lg);
+  font-family: var(--zj-font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--zj-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pkp_navigation_primary a:hover,
+.pkp_navigation_primary a:focus {
+  color: var(--zj-primary);
+  border-bottom-color: var(--zj-primary);
+  background-color: rgba(27, 58, 92, 0.04);
+}
+
+.pkp_navigation_primary .current a,
+.pkp_navigation_primary li.current > a {
+  color: var(--zj-primary);
+  border-bottom-color: var(--zj-secondary);
+  font-weight: 700;
+}
+
+/* Dropdown sub-menus */
+.pkp_navigation_primary ul ul,
+.pkp_navigation_primary .pkp_nav_list .pkp_nav_list {
+  background-color: var(--zj-bg);
+  border: 1px solid var(--zj-border);
+  border-radius: var(--zj-radius);
+  box-shadow: var(--zj-shadow-md);
+  min-width: 200px;
+}
+
+.pkp_navigation_primary ul ul a {
+  padding: var(--zj-spacing-sm) var(--zj-spacing-md);
+  font-size: 13px;
+  text-transform: none;
+  border-bottom: none;
+}
+
+.pkp_navigation_primary ul ul a:hover {
+  background-color: var(--zj-bg-alt);
+  color: var(--zj-primary);
+}
+
+/* -- 2d. User navigation (login, register, language) -- */
+.pkp_navigation_user {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding: 0 var(--zj-spacing-md);
+}
+
+.pkp_navigation_user a {
+  font-size: 13px;
+  color: var(--zj-text-light);
+  text-decoration: none;
+}
+
+.pkp_navigation_user a:hover {
+  color: var(--zj-primary);
+}
+
+/* -- 2e. Language switcher -- */
+.pkp_block_language,
+.pkp_navigation_user .locale {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.pkp_block_language .pkp_form select,
+.pkp_navigation_user .locale select {
+  border: 1px solid var(--zj-border);
+  border-radius: var(--zj-radius);
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: var(--zj-bg);
+  color: var(--zj-text);
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.pkp_block_language .pkp_form select:hover,
+.pkp_navigation_user .locale select:hover {
+  border-color: var(--zj-primary);
+}
+
+.pkp_block_language a {
+  display: inline-block;
+  padding: 4px 8px;
+  color: var(--zj-text-light);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: var(--zj-radius);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pkp_block_language a:hover {
+  background-color: var(--zj-bg-alt);
+  color: var(--zj-primary);
+}
+
+.pkp_block_language a.current {
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   3. FOOTER — OJS .pkp_structure_footer override
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pkp_structure_footer {
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+  padding: var(--zj-spacing-xxl) var(--zj-spacing-md) var(--zj-spacing-lg);
+  margin-top: var(--zj-spacing-section);
+}
+
+.pkp_structure_footer .pkp_footer_content,
+.pkp_structure_footer > .pkp_structure_content {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--zj-spacing-xl);
+}
+
+/* Footer headings */
+.pkp_structure_footer h3,
+.pkp_structure_footer h4 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--zj-secondary);
+  margin-bottom: var(--zj-spacing-sm);
+  font-family: var(--zj-font-sans);
+}
+
+/* Footer links */
+.pkp_structure_footer a {
+  color: var(--zj-text-inverse);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.pkp_structure_footer a:hover {
+  opacity: 1;
+  color: var(--zj-accent-light);
+}
+
+/* Footer text */
+.pkp_structure_footer p,
+.pkp_structure_footer li {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.pkp_structure_footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pkp_structure_footer li {
+  margin-bottom: var(--zj-spacing-sm);
+}
+
+/* Footer bottom bar — copyright + founded year */
+.pkp_structure_footer::after {
+  content: '';
+  display: block;
+  max-width: var(--zj-container);
+  margin: var(--zj-spacing-xl) auto 0;
+  padding-top: var(--zj-spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pkp_brand_footer,
+.pkp_structure_footer .pkp_brand_footer {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding-top: var(--zj-spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--zj-spacing-md);
+  font-size: 12px;
+  opacity: 0.7;
+  color: var(--zj-text-inverse);
+}
+
+.pkp_brand_footer a {
+  color: var(--zj-text-inverse);
+  opacity: 0.8;
+}
+
+.pkp_brand_footer a:hover {
+  opacity: 1;
+  color: var(--zj-accent-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   4. HOMEPAGE — current issue, articles, announcements
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* -- 4a. Page container -- */
+.pkp_structure_main,
+.pkp_structure_content {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding: var(--zj-spacing-xl) var(--zj-spacing-md);
+}
+
+/* -- 4b. Section headings -- */
+.page_index h2,
+.page_issue h2,
+.pkp_page_index h2,
+.pkp_page_issue h2,
+.obj_issue_toc h2,
+.cmp_announcements h2 {
+  font-family: var(--zj-font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  margin: 0 0 var(--zj-spacing-lg);
+  padding-bottom: var(--zj-spacing-md);
+  border-bottom: 3px solid var(--zj-secondary);
+  display: inline-block;
+}
+
+/* -- 4c. Current issue block -- */
+.obj_issue_toc {
+  margin-bottom: var(--zj-spacing-xxl);
+}
+
+.obj_issue_toc .title {
+  font-family: var(--zj-font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--zj-primary);
+}
+
+.obj_issue_toc .title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.obj_issue_toc .title a:hover {
+  color: var(--zj-primary);
+}
+
+/* Issue cover image */
+.obj_issue_toc .cover img,
+.obj_issue_summary .cover img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--zj-radius);
+  box-shadow: var(--zj-shadow-md);
+}
+
+/* Issue description */
+.obj_issue_toc .description {
+  font-size: 14px;
+  color: var(--zj-text-light);
+  line-height: 1.6;
+  margin-bottom: var(--zj-spacing-lg);
+}
+
+/* -- 4d. Section headers within issue TOC -- */
+.obj_issue_toc .sections .section {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_issue_toc .sections .section .title,
+.obj_issue_toc h3 {
+  font-family: var(--zj-font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  padding-bottom: var(--zj-spacing-sm);
+  border-bottom: 2px solid var(--zj-secondary);
+  margin-bottom: var(--zj-spacing-md);
+}
+
+/* -- 4e. Article listing in issue TOC -- */
+.obj_article_summary {
+  padding: var(--zj-spacing-md);
+  border: 1px solid var(--zj-border-light);
+  border-radius: var(--zj-radius);
+  margin-bottom: var(--zj-spacing-md);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.obj_article_summary:hover {
+  box-shadow: var(--zj-shadow-sm);
+  border-color: var(--zj-border);
+}
+
+.obj_article_summary .title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 var(--zj-spacing-xs);
+  line-height: 1.4;
+}
+
+.obj_article_summary .title a {
+  color: var(--zj-primary);
+  text-decoration: none;
+}
+
+.obj_article_summary .title a:hover {
+  color: var(--zj-primary);
+  text-decoration: underline;
+}
+
+.obj_article_summary .authors,
+.obj_article_summary .meta {
+  font-size: 14px;
+  color: var(--zj-text-light);
+  margin: 0;
+}
+
+.obj_article_summary .pages {
+  font-size: 13px;
+  color: var(--zj-text-muted);
+}
+
+.obj_article_summary .galleys {
+  margin-top: var(--zj-spacing-sm);
+}
+
+.obj_article_summary .galleys a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--zj-primary);
+  border-radius: var(--zj-radius);
+  color: var(--zj-primary);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.obj_article_summary .galleys a:hover {
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+}
+
+/* -- 4f. Announcements -- */
+.cmp_announcements {
+  margin-bottom: var(--zj-spacing-xxl);
+}
+
+.obj_announcement_summary,
+.obj_announcement {
+  padding: var(--zj-spacing-lg);
+  background-color: var(--zj-bg-alt);
+  border-radius: var(--zj-radius);
+  margin-bottom: var(--zj-spacing-md);
+  border-left: 4px solid var(--zj-secondary);
+}
+
+.obj_announcement_summary .title,
+.obj_announcement .title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  margin: 0 0 var(--zj-spacing-sm);
+}
+
+.obj_announcement_summary .title a,
+.obj_announcement .title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.obj_announcement_summary .title a:hover,
+.obj_announcement .title a:hover {
+  text-decoration: underline;
+  color: var(--zj-primary);
+}
+
+.obj_announcement_summary .date,
+.obj_announcement .date {
+  font-size: 12px;
+  color: var(--zj-text-muted);
+  margin-bottom: var(--zj-spacing-sm);
+}
+
+.obj_announcement_summary .summary,
+.obj_announcement .summary {
+  font-size: 14px;
+  color: var(--zj-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* "More announcements" link */
+.cmp_announcements .more {
+  text-align: right;
+  margin-top: var(--zj-spacing-md);
+}
+
+.cmp_announcements .more a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--zj-primary);
+  text-decoration: none;
+}
+
+.cmp_announcements .more a:hover {
+  text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   5. ARTICLE PAGE — title, authors, abstract, keywords, PDF
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* -- 5a. Article title -- */
+.obj_article_details .title,
+.pkp_page_article .title {
+  font-family: var(--zj-font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  line-height: 1.3;
+  margin: 0 0 var(--zj-spacing-lg);
+}
+
+/* -- 5b. Authors -- */
+.obj_article_details .authors,
+.pkp_page_article .authors {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_article_details .authors .name,
+.obj_article_details .authors strong {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--zj-text);
+}
+
+.obj_article_details .authors .affiliation {
+  display: block;
+  font-size: 14px;
+  color: var(--zj-text-light);
+}
+
+.obj_article_details .authors .orcid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--zj-success);
+}
+
+.obj_article_details .authors .orcid a:hover {
+  text-decoration: underline;
+}
+
+/* -- 5c. DOI badge -- */
+.obj_article_details .doi,
+.pkp_page_article .doi {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--zj-spacing-sm);
+  padding: var(--zj-spacing-sm) var(--zj-spacing-md);
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+  border-radius: var(--zj-radius);
+  font-size: 14px;
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_article_details .doi .label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.obj_article_details .doi a {
+  color: var(--zj-accent-light);
+  text-decoration: none;
+}
+
+.obj_article_details .doi a:hover {
+  text-decoration: underline;
+}
+
+/* -- 5d. Metadata panel (dates, issue info) -- */
+.obj_article_details .item {
+  margin-bottom: var(--zj-spacing-md);
+}
+
+.obj_article_details .item .label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--zj-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.obj_article_details .item .value {
+  font-size: 14px;
+  color: var(--zj-text);
+}
+
+/* -- 5e. Abstract -- */
+.obj_article_details .abstract,
+.pkp_page_article .abstract {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_article_details .abstract .label,
+.obj_article_details .abstract h3 {
+  font-family: var(--zj-font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  margin: 0 0 var(--zj-spacing-md);
+}
+
+.obj_article_details .abstract .value,
+.obj_article_details .abstract p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--zj-text);
+  text-align: justify;
+}
+
+/* -- 5f. Keywords -- */
+.obj_article_details .keywords,
+.pkp_page_article .keywords {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_article_details .keywords .label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--zj-text-light);
+  text-transform: uppercase;
+  margin: 0 0 var(--zj-spacing-sm);
+  display: block;
+}
+
+.obj_article_details .keywords .value {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--zj-spacing-sm);
+}
+
+.obj_article_details .keywords .value span,
+.obj_article_details .keywords .keyword {
+  display: inline-block;
+  padding: 4px 16px;
+  background-color: var(--zj-bg-alt);
+  border: 1px solid var(--zj-border);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--zj-text);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.obj_article_details .keywords .value span:hover,
+.obj_article_details .keywords .keyword:hover {
+  background-color: var(--zj-primary);
+  border-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+}
+
+/* -- 5g. PDF download and galleys -- */
+.obj_article_details .galleys_links,
+.obj_galley_link {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_galley_link a,
+.obj_article_details .galleys_links a,
+a.obj_galley_link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--zj-spacing-sm);
+  padding: var(--zj-spacing-md) var(--zj-spacing-xl);
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+  font-family: var(--zj-font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: var(--zj-radius);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.obj_galley_link a:hover,
+.obj_article_details .galleys_links a:hover,
+a.obj_galley_link:hover {
+  background-color: var(--zj-primary-dark);
+  transform: translateY(-1px);
+  color: var(--zj-text-inverse);
+}
+
+/* Secondary galley links (e.g. HTML, XML) */
+.obj_article_details .galleys_links a + a {
+  background-color: transparent;
+  color: var(--zj-primary);
+  border: 2px solid var(--zj-primary);
+}
+
+.obj_article_details .galleys_links a + a:hover {
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+}
+
+/* -- 5h. References -- */
+.obj_article_details .references {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.obj_article_details .references .label,
+.obj_article_details .references h3 {
+  font-family: var(--zj-font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  margin: 0 0 var(--zj-spacing-md);
+  padding-bottom: var(--zj-spacing-sm);
+  border-bottom: 2px solid var(--zj-secondary);
+}
+
+.obj_article_details .references .value {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--zj-text);
+}
+
+.obj_article_details .references .value a {
+  color: var(--zj-success);
+  text-decoration: none;
+}
+
+.obj_article_details .references .value a:hover {
+  text-decoration: underline;
+}
+
+/* -- 5i. Article statistics -- */
+.obj_article_details .item.views,
+.obj_article_details .item.downloads {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--zj-spacing-sm);
+  padding: var(--zj-spacing-sm) var(--zj-spacing-md);
+  background-color: var(--zj-bg-alt);
+  border-radius: var(--zj-radius);
+  font-size: 14px;
+  color: var(--zj-text-light);
+  margin-right: var(--zj-spacing-md);
+  margin-bottom: var(--zj-spacing-md);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   6. SIDEBAR
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pkp_structure_sidebar .pkp_block {
+  margin-bottom: var(--zj-spacing-xl);
+}
+
+.pkp_structure_sidebar .pkp_block .title {
+  font-family: var(--zj-font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--zj-primary);
+  padding-bottom: var(--zj-spacing-sm);
+  border-bottom: 2px solid var(--zj-secondary);
+  margin-bottom: var(--zj-spacing-md);
+}
+
+.pkp_structure_sidebar .pkp_block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pkp_structure_sidebar .pkp_block li {
+  margin-bottom: var(--zj-spacing-xs);
+}
+
+.pkp_structure_sidebar .pkp_block a {
+  font-size: 14px;
+  color: var(--zj-text);
+  text-decoration: none;
+  padding: 4px 0;
+  display: block;
+  transition: color 0.15s ease;
+}
+
+.pkp_structure_sidebar .pkp_block a:hover {
+  color: var(--zj-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   7. ISSUE ARCHIVE PAGE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.obj_issue_summary {
+  padding: var(--zj-spacing-lg);
+  border: 1px solid var(--zj-border-light);
+  border-radius: var(--zj-radius-lg);
+  margin-bottom: var(--zj-spacing-md);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.obj_issue_summary:hover {
+  box-shadow: var(--zj-shadow-sm);
+  border-color: var(--zj-border);
+}
+
+.obj_issue_summary .title {
+  font-family: var(--zj-font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--zj-primary);
+  margin-bottom: var(--zj-spacing-sm);
+}
+
+.obj_issue_summary .title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.obj_issue_summary .title a:hover {
+  color: var(--zj-primary);
+}
+
+.obj_issue_summary .description {
+  font-size: 14px;
+  color: var(--zj-text-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   8. FORMS & BUTTONS (registration, login, submission)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pkp_form .pkp_button,
+.pkp_form input[type="submit"],
+button.pkp_button,
+a.pkp_button {
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+  border: none;
+  border-radius: var(--zj-radius);
+  padding: var(--zj-spacing-sm) var(--zj-spacing-lg);
+  font-family: var(--zj-font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.pkp_form .pkp_button:hover,
+.pkp_form input[type="submit"]:hover,
+button.pkp_button:hover,
+a.pkp_button:hover {
+  background-color: var(--zj-primary-dark);
+  transform: translateY(-1px);
+}
+
+.pkp_form input[type="text"],
+.pkp_form input[type="email"],
+.pkp_form input[type="password"],
+.pkp_form input[type="url"],
+.pkp_form textarea,
+.pkp_form select {
+  border: 1px solid var(--zj-border);
+  border-radius: var(--zj-radius);
+  padding: var(--zj-spacing-sm) var(--zj-spacing-md);
+  font-family: var(--zj-font-sans);
+  font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pkp_form input[type="text"]:focus,
+.pkp_form input[type="email"]:focus,
+.pkp_form input[type="password"]:focus,
+.pkp_form input[type="url"]:focus,
+.pkp_form textarea:focus,
+.pkp_form select:focus {
+  border-color: var(--zj-primary);
+  box-shadow: 0 0 0 2px rgba(142, 68, 173, 0.2);
+  outline: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   9. BREADCRUMBS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pkp_breadcrumbs,
+.pkp_page_header .pkp_breadcrumbs {
+  max-width: var(--zj-container);
+  margin: 0 auto;
+  padding: var(--zj-spacing-md) var(--zj-spacing-md) 0;
+  font-size: 13px;
+  color: var(--zj-text-muted);
+}
+
+.pkp_breadcrumbs a {
+  color: var(--zj-text-light);
+  text-decoration: none;
+}
+
+.pkp_breadcrumbs a:hover {
+  color: var(--zj-primary);
+  text-decoration: underline;
+}
+
+.pkp_breadcrumbs .separator {
+  margin: 0 4px;
+  color: var(--zj-border);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   10. SEARCH PAGE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pkp_search_form .search_input {
+  max-width: 600px;
+  margin: 0 auto var(--zj-spacing-lg);
+}
+
+.pkp_search_form input[type="text"] {
+  width: 100%;
+  padding: var(--zj-spacing-md);
+  border: 2px solid var(--zj-border);
+  border-radius: var(--zj-radius-lg);
+  font-size: 16px;
+  transition: border-color 0.15s ease;
+}
+
+.pkp_search_form input[type="text"]:focus {
+  border-color: var(--zj-primary);
+  box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.15);
+}
+
+/* Search results */
+.search_results .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--zj-primary);
+}
+
+.search_results .title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.search_results .title a:hover {
+  color: var(--zj-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   11. PAGINATION
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.cmp_pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--zj-spacing-sm);
+  margin: var(--zj-spacing-xl) 0;
+}
+
+.cmp_pagination a,
+.cmp_pagination .current {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 var(--zj-spacing-sm);
+  border-radius: var(--zj-radius);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cmp_pagination a {
+  color: var(--zj-text);
+  border: 1px solid var(--zj-border);
+}
+
+.cmp_pagination a:hover {
+  background-color: var(--zj-primary);
+  border-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+}
+
+.cmp_pagination .current {
+  background-color: var(--zj-primary);
+  color: var(--zj-text-inverse);
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   12. NOTIFICATIONS / MESSAGES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pkp_notification {
+  border-radius: var(--zj-radius);
+  padding: var(--zj-spacing-md);
+  margin-bottom: var(--zj-spacing-md);
+  font-size: 14px;
+}
+
+.pkp_notification.notify_success {
+  background-color: #e8f5e9;
+  border-left: 4px solid var(--zj-success);
+  color: #1b5e20;
+}
+
+.pkp_notification.notify_error {
+  background-color: #ffebee;
+  border-left: 4px solid var(--zj-error);
+  color: #b71c1c;
+}
+
+.pkp_notification.notify_warning {
+  background-color: #fff3e0;
+  border-left: 4px solid #F57C00;
+  color: #e65100;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   13. RESPONSIVE DESIGN
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* -- Mobile (< 768px) -- */
+@media (max-width: 767px) {
+  .pkp_structure_head::before {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .pkp_site_name .is_text {
+    font-size: 18px;
+  }
+
+  .pkp_navigation_primary > ul,
+  .pkp_navigation_primary .pkp_nav_list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pkp_navigation_primary a {
+    padding: var(--zj-spacing-sm) var(--zj-spacing-md);
+    text-align: center;
+    border-bottom: 1px solid var(--zj-border-light);
+  }
+
+  .pkp_structure_footer .pkp_footer_content,
+  .pkp_structure_footer > .pkp_structure_content {
+    grid-template-columns: 1fr;
+  }
+
+  .pkp_brand_footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .obj_article_details .title,
+  .pkp_page_article .title {
+    font-size: 24px;
+  }
+
+  .page_index h2,
+  .page_issue h2,
+  .pkp_page_index h2,
+  .pkp_page_issue h2,
+  .obj_issue_toc h2,
+  .cmp_announcements h2 {
+    font-size: 22px;
+  }
+
+  .obj_galley_link a,
+  .obj_article_details .galleys_links a,
+  a.obj_galley_link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* -- Tablet (768px - 1023px) -- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pkp_structure_footer .pkp_footer_content,
+  .pkp_structure_footer > .pkp_structure_content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* -- Desktop (>= 1024px) -- */
+@media (min-width: 1024px) {
+  .pkp_structure_footer .pkp_footer_content,
+  .pkp_structure_footer > .pkp_structure_content {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+/* -- Full HD (>= 1920px) -- */
+@media (min-width: 1920px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   14. PRINT STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media print {
+  .pkp_structure_head,
+  .pkp_structure_footer,
+  .pkp_navigation_primary,
+  .pkp_navigation_user,
+  .pkp_structure_sidebar,
+  .pkp_search_form,
+  .obj_galley_link,
+  .cmp_pagination {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .obj_article_details .title {
+    font-size: 18pt;
+  }
+}

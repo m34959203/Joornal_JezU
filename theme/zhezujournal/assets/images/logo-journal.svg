@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 120" width="470" height="120">
+  <defs>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a5580;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B3A5C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pageGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f0fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Open book icon -->
+  <g transform="translate(18, 14)">
+    <!-- Left page -->
+    <path d="M42,8 C32,8 14,10 4,16 L4,80 C14,74 32,72 42,72 Z" fill="url(#pageGrad)" stroke="#1B3A5C" stroke-width="1.5"/>
+    <!-- Right page -->
+    <path d="M42,8 C52,8 70,10 80,16 L80,80 C70,74 52,72 42,72 Z" fill="url(#pageGrad)" stroke="#1B3A5C" stroke-width="1.5"/>
+    <!-- Spine -->
+    <line x1="42" y1="8" x2="42" y2="72" stroke="#1B3A5C" stroke-width="2"/>
+    <!-- Left page lines -->
+    <line x1="14" y1="28" x2="36" y2="26" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="14" y1="36" x2="36" y2="34" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="14" y1="44" x2="36" y2="42" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="14" y1="52" x2="36" y2="50" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="14" y1="60" x2="30" y2="58" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <!-- Right page lines -->
+    <line x1="48" y1="26" x2="70" y2="28" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="48" y1="34" x2="70" y2="36" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="48" y1="42" x2="70" y2="44" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="48" y1="50" x2="70" y2="52" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <line x1="48" y1="58" x2="64" y2="60" stroke="#1B3A5C" stroke-width="0.8" opacity="0.3"/>
+    <!-- Laurel left -->
+    <path d="M10,82 C4,72 2,60 6,50" fill="none" stroke="#1B3A5C" stroke-width="1.5" opacity="0.5"/>
+    <path d="M6,50 C2,54 1,60 3,64" fill="none" stroke="#1B3A5C" stroke-width="1" opacity="0.35"/>
+    <path d="M8,56 C3,58 1,64 4,70" fill="none" stroke="#1B3A5C" stroke-width="1" opacity="0.35"/>
+    <!-- Laurel right -->
+    <path d="M74,82 C80,72 82,60 78,50" fill="none" stroke="#1B3A5C" stroke-width="1.5" opacity="0.5"/>
+    <path d="M78,50 C82,54 83,60 81,64" fill="none" stroke="#1B3A5C" stroke-width="1" opacity="0.35"/>
+    <path d="M76,56 C81,58 83,64 80,70" fill="none" stroke="#1B3A5C" stroke-width="1" opacity="0.35"/>
+    <!-- Academic cap hint above book -->
+    <path d="M42,2 L26,10 L42,8 L58,10 Z" fill="#1B3A5C" opacity="0.6"/>
+  </g>
+
+  <!-- Vertical separator -->
+  <line x1="115" y1="18" x2="115" y2="102" stroke="#1B3A5C" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Main title -->
+  <text x="130" y="42" font-family="'Crimson Pro', Georgia, serif" font-size="30" font-weight="bold" fill="#1B3A5C" letter-spacing="1">ВЕСТНИК</text>
+  <text x="275" y="42" font-family="'Crimson Pro', Georgia, serif" font-size="30" font-weight="bold" fill="#1B3A5C" letter-spacing="1">ЖезУ</text>
+
+  <!-- Decorative line under title -->
+  <line x1="130" y1="50" x2="430" y2="50" stroke="#1B3A5C" stroke-width="1.2" opacity="0.4"/>
+
+  <!-- Subtitle -->
+  <text x="130" y="70" font-family="'Atkinson Hyperlegible', Arial, sans-serif" font-size="14" fill="#1B3A5C" letter-spacing="2" font-style="italic">Научный журнал</text>
+
+  <!-- University name -->
+  <text x="130" y="92" font-family="'Atkinson Hyperlegible', Arial, sans-serif" font-size="11" fill="#1B3A5C" opacity="0.7" letter-spacing="0.5">Жезказганский университет им. О.А. Байконурова</text>
+
+  <!-- Small decorative dots -->
+  <circle cx="130" cy="102" r="1.5" fill="#1B3A5C" opacity="0.4"/>
+  <circle cx="137" cy="102" r="1.5" fill="#1B3A5C" opacity="0.3"/>
+  <circle cx="144" cy="102" r="1.5" fill="#1B3A5C" opacity="0.2"/>
+</svg>

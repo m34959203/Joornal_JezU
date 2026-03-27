@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: zhezujournal-theme 1.0.0\n"
-"POT-Creation-Date: 2026-03-23\n"
-"PO-Revision-Date: 2026-03-23\n"
+"POT-Creation-Date: 2026-03-26\n"
+"PO-Revision-Date: 2026-03-26\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr "Жүйелік қаріп"
 # ── Header ───────────────────────────────────────────────────────────────────
 
 msgid "plugins.themes.zhezujournal.header.journalTitle"
-msgstr "О.А. Байқоңыров атындағы Жезқазған университетінің Хабаршысы"
+msgstr "ЖезУ Хабаршысы"
 
 msgid "plugins.themes.zhezujournal.header.logoAlt"
 msgstr "Журнал логотипі"
@@ -46,7 +46,7 @@ msgid "plugins.themes.zhezujournal.header.issnPrint"
 msgstr "ISSN (баспа)"
 
 msgid "plugins.themes.zhezujournal.header.issnOnline"
-msgstr "ISSN (онлайн)"
+msgstr "eISSN (онлайн)"
 
 msgid "plugins.themes.zhezujournal.header.searchToggle"
 msgstr "Іздеуді ашу"
@@ -112,7 +112,7 @@ msgstr "Хабарландырулар"
 # ── Footer ───────────────────────────────────────────────────────────────────
 
 msgid "plugins.themes.zhezujournal.footer.journalTitle"
-msgstr "О.А. Байқоңыров атындағы Жезқазған университетінің Хабаршысы"
+msgstr "ЖезУ Хабаршысы"
 
 msgid "plugins.themes.zhezujournal.footer.logoAlt"
 msgstr "Университет эмблемасы"
@@ -138,13 +138,51 @@ msgstr "Электрондық пошта"
 msgid "plugins.themes.zhezujournal.footer.phone"
 msgstr "Телефон"
 
+msgid "plugins.themes.zhezujournal.footer.whatsapp"
+msgstr "WhatsApp"
+
+msgid "plugins.themes.zhezujournal.footer.social"
+msgstr "Біз әлеуметтік желілерде"
+
 msgid "plugins.themes.zhezujournal.footer.copyright"
-msgstr "ЖезУ Хабаршысы. Барлық құқықтар қорғалған."
+msgstr "О.А. Байқоңыров атындағы Жезқазған университеті. Барлық құқықтар қорғалған."
 
 # ── Breadcrumbs ──────────────────────────────────────────────────────────────
 
 msgid "plugins.themes.zhezujournal.breadcrumbs.label"
 msgstr "Навигациялық тізбек"
+
+# ── About ────────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.about.pageTitle"
+msgstr "Журнал туралы"
+
+msgid "plugins.themes.zhezujournal.about.focusScope"
+msgstr "Бағыттар мен тақырыптар"
+
+msgid "plugins.themes.zhezujournal.about.editorialPolicy"
+msgstr "Редакциялық саясат"
+
+msgid "plugins.themes.zhezujournal.about.editorialBoard"
+msgstr "Редакциялық алқа"
+
+msgid "plugins.themes.zhezujournal.about.reviewPolicy"
+msgstr "Рецензиялау тәртібі"
+
+msgid "plugins.themes.zhezujournal.about.openAccess"
+msgstr "Ашық қолжетімділік"
+
+msgid "plugins.themes.zhezujournal.about.archiving"
+msgstr "Мұрағаттау"
+
+msgid "plugins.themes.zhezujournal.about.sponsorship"
+msgstr "Демеушілер мен құрылтайшылар"
+
+msgid "plugins.themes.zhezujournal.about.sidebarNav"
+msgstr "Бөлімдер бойынша навигация"
+
+msgid "plugins.themes.zhezujournal.about.authorGuidelines"
+msgstr "Авторларға арналған нұсқаулар"
 
 # ── Editorial Board ──────────────────────────────────────────────────────────
 
@@ -198,7 +236,92 @@ msgstr "Мақұлданған"
 msgid "plugins.themes.zhezujournal.article.datePublished"
 msgstr "Жарияланған"
 
+msgid "plugins.themes.zhezujournal.article.dateSubmitted"
+msgstr "Жіберілген күні"
+
+msgid "plugins.themes.zhezujournal.article.showMore"
+msgstr "Толық көрсету"
+
+msgid "plugins.themes.zhezujournal.article.license"
+msgstr "Лицензия"
+
+msgid "plugins.themes.zhezujournal.article.howToCite"
+msgstr "Дәйексөз келтіру"
+
+msgid "plugins.themes.zhezujournal.article.copyCitation"
+msgstr "Сілтемені көшіру"
+
+# ── Contact ──────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.contact.pageTitle"
+msgstr "Байланыс"
+
+msgid "plugins.themes.zhezujournal.contact.editorialOffice"
+msgstr "Журнал редакциясы"
+
+msgid "plugins.themes.zhezujournal.contact.address"
+msgstr "Мекенжай"
+
+msgid "plugins.themes.zhezujournal.contact.person"
+msgstr "Байланыс тұлғасы"
+
+msgid "plugins.themes.zhezujournal.contact.phone"
+msgstr "Телефон"
+
+msgid "plugins.themes.zhezujournal.contact.email"
+msgstr "Электрондық пошта"
+
+msgid "plugins.themes.zhezujournal.contact.techSupport"
+msgstr "Техникалық қолдау"
+
+msgid "plugins.themes.zhezujournal.contact.map"
+msgstr "Карта"
+
+msgid "plugins.themes.zhezujournal.contact.mapTitle"
+msgstr "Редакцияның картадағы орналасуы"
+
+msgid "plugins.themes.zhezujournal.contact.feedbackTitle"
+msgstr "Кері байланыс"
+
+msgid "plugins.themes.zhezujournal.contact.feedbackSuccess"
+msgstr "Сіздің хабарламаңыз сәтті жіберілді!"
+
+msgid "plugins.themes.zhezujournal.contact.formName"
+msgstr "Аты"
+
+msgid "plugins.themes.zhezujournal.contact.formEmail"
+msgstr "Email"
+
+msgid "plugins.themes.zhezujournal.contact.formSubject"
+msgstr "Тақырып"
+
+msgid "plugins.themes.zhezujournal.contact.formMessage"
+msgstr "Хабарлама"
+
+msgid "plugins.themes.zhezujournal.contact.formSubmit"
+msgstr "Жіберу"
+
+# ── Issue ────────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.issue.published"
+msgstr "Жарияланған"
+
+msgid "plugins.themes.zhezujournal.issue.noTitle"
+msgstr "Атаусыз"
+
+msgid "plugins.themes.zhezujournal.issue.downloadFull"
+msgstr "Толық шығарылымды жүктеу"
+
+msgid "plugins.themes.zhezujournal.issue.pages"
+msgstr "Б."
+
+msgid "plugins.themes.zhezujournal.issue.noArticles"
+msgstr "Бұл шығарылымда әлі мақалалар жоқ"
+
 # ── Search ───────────────────────────────────────────────────────────────────
+
+msgid "plugins.themes.zhezujournal.search.pageTitle"
+msgstr "Іздеу"
 
 msgid "plugins.themes.zhezujournal.search.title"
 msgstr "Іздеу"
@@ -209,6 +332,24 @@ msgstr "Іздеу сұранысын енгізіңіз..."
 msgid "plugins.themes.zhezujournal.search.submit"
 msgstr "Іздеу"
 
+msgid "plugins.themes.zhezujournal.search.advancedToggle"
+msgstr "Кеңейтілген іздеу"
+
+msgid "plugins.themes.zhezujournal.search.author"
+msgstr "Автор"
+
+msgid "plugins.themes.zhezujournal.search.keywords"
+msgstr "Кілт сөздер"
+
+msgid "plugins.themes.zhezujournal.search.dateFrom"
+msgstr "Күні бастап"
+
+msgid "plugins.themes.zhezujournal.search.dateTo"
+msgstr "Күні дейін"
+
+msgid "plugins.themes.zhezujournal.search.resultsCount"
+msgstr "Табылған нәтижелер: {$count}"
+
 msgid "plugins.themes.zhezujournal.search.resultsFor"
 msgstr "Іздеу нәтижелері"
 
@@ -217,6 +358,15 @@ msgstr "Сұранысыңыз бойынша ештеңе табылмады"
 
 msgid "plugins.themes.zhezujournal.search.noResultsHint"
 msgstr "Іздеу сұранысын өзгертіп көріңіз немесе басқа кілт сөздерді қолданыңыз"
+
+msgid "plugins.themes.zhezujournal.search.pagination"
+msgstr "Беттік навигация"
+
+msgid "plugins.themes.zhezujournal.search.prevPage"
+msgstr "Алдыңғы бет"
+
+msgid "plugins.themes.zhezujournal.search.nextPage"
+msgstr "Келесі бет"
 
 # ── Forms ────────────────────────────────────────────────────────────────────
 

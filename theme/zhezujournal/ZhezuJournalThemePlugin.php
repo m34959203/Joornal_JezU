@@ -48,10 +48,10 @@ class ZhezuJournalThemePlugin extends ThemePlugin
 
         $this->addOption('baseFont', 'radio', [
             'label' => 'plugins.themes.zhezujournal.option.baseFont',
-            'default' => 'roboto',
+            'default' => 'academic',
             'options' => [
-                'roboto' => 'Roboto',
-                'ptserif' => 'PT Serif',
+                'academic' => 'Crimson Pro + Atkinson Hyperlegible',
+                'classic' => 'EB Garamond + Lato',
                 'system' => 'plugins.themes.zhezujournal.option.systemFont',
             ],
         ]);
@@ -68,10 +68,10 @@ class ZhezuJournalThemePlugin extends ThemePlugin
         $this->addStyle('forms', 'styles/forms.less');
         $this->addStyle('responsive', 'styles/responsive.less');
 
-        // Load Google Fonts
+        // Load Google Fonts (Academic: Crimson Pro + Atkinson Hyperlegible)
         $this->addStyle(
             'google-fonts',
-            'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=PT+Serif:wght@400;700&display=swap',
+            'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap',
             ['baseUrl' => '']
         );
 

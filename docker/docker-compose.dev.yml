@@ -1,18 +1,23 @@
 version: "3.8"
 
-# Development override
+# Development override (direct OJS access, no SSL)
 # Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
 services:
   ojs:
+    ports:
+      - "8080:80"
     environment:
       OJS_CLI_INSTALL: 1
       OJS_DEBUG: "true"
+    networks:
+      - internal
+      - external
 
   db:
     ports:
-      - "3306:3306"
+      - "3307:3306"
 
   nginx:
-    ports:
-      - "8080:80"
+    profiles:
+      - disabled
